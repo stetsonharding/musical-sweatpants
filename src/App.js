@@ -1,9 +1,11 @@
 import "./App.css";
 
+import ImageContainer from "./components/builder/ImageContainer";
+
 function App() {
   return (
-    <div className="App">
-      <h1>I am app</h1>
+    <div className="App-container">
+      <ImageContainer />
     </div>
   );
 }
