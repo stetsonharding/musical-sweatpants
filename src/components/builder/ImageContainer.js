@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../css/ImageContainer.js";
+import "../../css/ImageContainer.css";
 
 //sweatpant images
 import frontSide from "../../assets/frontside.png";
@@ -10,8 +10,16 @@ function ImageContainer() {
   return (
     <div className="sweatpants-container">
       <div className="sweapants-images">
-        <img src={frontSide} alt="Front View of Sweatpants" />
-        <img src={backSide} alt="Back View of Sweatpants" />
+        <img
+          className="sweatpants_frontview"
+          src={frontSide}
+          alt="Front View of Sweatpants"
+        />
+        <img
+          className="sweatpants_backview"
+          src={backSide}
+          alt="Back View of Sweatpants"
+        />
       </div>
     </div>
   );
