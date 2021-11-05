@@ -1,0 +1,21 @@
+.cart-badge {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+
+  position: absolute;
+  background-color: #fff;
+  width: 66px;
+  height: 66px;
+  top: 20px;
+  right: 20px;
+  background-image: url("../assets/bag.svg");
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  background-position-x: center;
+  background-position-y: 14px;
+  z-index: 2;
+  background-size: 30px 30px;
+}

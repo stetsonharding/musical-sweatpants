@@ -1,13 +1,11 @@
 import "./App.css";
 
-import ImageContainer from "./components/builder/ImageContainer";
-import MainContent from "./components/builder/MainContent";
+import Layout from "./components/builder/Layout";
 
 function App() {
   return (
     <div className="App-container">
-      <ImageContainer />
-      <MainContent />
+      <Layout />
     </div>
   );
 }
