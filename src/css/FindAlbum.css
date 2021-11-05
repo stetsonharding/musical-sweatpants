@@ -1,12 +1,26 @@
-.find-album-input{
-    padding: 17px;
-    padding-left: 55px;
-    width: 300px;
-    border: 1px solid #f5f5f5;
-    font-size: 13px;
-    color: gray;
-    background-image: url('https://www.flaticon.com/authors/arkinasi');
-    background-repeat: no-repeat;
-    background-position: left center;
-    outline: 0;
+/* text input */
+.find-album-input {
+  width: 35%;
+  border-radius: 26px;
+  border: none;
+  background-color: #f3efef;
+  padding: 1.5% 4%;
+  margin: 2rem 1.5rem;
+  background-image: url(https://www.pngarea.com/pngm/109/1164446_searchicon-png-search-icon-png-download.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  outline: 0;
+  background-position: 6px;
+  background-size: 14px;
+  box-shadow: 1px 1px 1px rgb(85, 83, 83);
+ 
 }
+/* album art text */
+#find-album-label{
+   padding: 0;
+   margin: 0;
+   margin: 0 1.5rem;
+   font-size: .8rem;
+}
+
+

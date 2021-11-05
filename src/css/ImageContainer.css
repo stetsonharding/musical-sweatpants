@@ -1,21 +1,16 @@
+/* container of sweatpants images */
 .sweatpants-container {
   background-color: rgb(233, 232, 232);
   width: 50%;
   height: 100%;
-}
-
-.sweatpants-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-
+/* images */
 .sweatpants_frontview,
 .sweatpants_backview {
   margin: 40px;
 }
 
-.sweatpants-images img {
-  margin: 40px;
-}
