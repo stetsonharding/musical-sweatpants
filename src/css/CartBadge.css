@@ -19,3 +19,8 @@
   z-index: 2;
   background-size: 30px 30px;
 }
+
+.cart-badge:hover {
+  box-shadow: 1px 1px 1px 1px black;
+  transition: 0.3s;
+}
