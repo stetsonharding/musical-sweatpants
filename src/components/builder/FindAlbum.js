@@ -32,6 +32,8 @@ function FindAlbum() {
     [buildQueryString, getApi]
   );
 
+  //deboncing,
+  //callbacks
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
