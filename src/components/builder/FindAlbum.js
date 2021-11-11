@@ -42,6 +42,11 @@ function FindAlbum() {
     }
   }, [debouncedAlbumSearch, SearchAlbum]);
 
+  //display search results from api response.
+  const searchResults = () => {
+    return <h1>Testing Search Results</h1>;
+  };
+
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
