@@ -1,12 +1,14 @@
 import "./App.css";
-
+import ApiProvider from "./providers/ApiProvider";
 import Layout from "./components/builder/Layout";
 
 function App() {
   return (
-    <div className="App-container">
-      <Layout />
-    </div>
+    <ApiProvider>
+      <div className="App-container">
+        <Layout />
+      </div>
+    </ApiProvider>
   );
 }
 

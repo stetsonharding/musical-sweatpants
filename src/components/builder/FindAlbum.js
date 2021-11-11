@@ -4,9 +4,9 @@ import { useApiContext } from "../../providers/ApiProvider";
 import { useCurrentAlbumProvider } from "../../providers/CurrentAlbumProvider";
 
 import "../../css/FindAlbum.css";
-import { GetAppOutlined } from "@material-ui/icons";
 
 function FindAlbum() {
+  const [getApi, buildQueryString] = useApiContext();
   const [albumSearch, setAlbumSearch] = useState("");
   const [apiJson, setApiJson] = useState(null);
   const debouncedAlbumSearch = useDebounce(albumSearch, 1000);
@@ -23,17 +23,25 @@ function FindAlbum() {
         term: input,
       };
       const completeUrl = `${baseUrl}${buildQueryString(urlAlbumOptions)}`;
-      const results = await GetAppOutlined(completeUrl);
+      const results = await getApi(completeUrl);
+      //removing unwanted data from api
       const albumData = JSON.parse(
         results.data.slice(9, -4).replace(/\u21b5/g, "")
       );
       setApiJson(albumData);
+      console.log(apiJson.results[1]);
     },
     [buildQueryString, getApi]
   );
 
-  //deboncing,
-  //callbacks
+  useEffect(() => {
+    if (debouncedAlbumSearch) {
+      SearchAlbum(debouncedAlbumSearch);
+    } else if (debouncedAlbumSearch === "") {
+      setApiJson(null);
+    }
+  }, [debouncedAlbumSearch, SearchAlbum]);
+
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
@@ -43,6 +51,7 @@ function FindAlbum() {
         placeholder="Find Album"
         onChange={(e) => setAlbumSearch(e.target.value)}
       />
+      {apiJson && <img src={apiJson.results[1].artworkUrl60} alt="" />}
     </div>
   );
 }
