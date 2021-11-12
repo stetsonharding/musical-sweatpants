@@ -8,7 +8,8 @@ import "../../css/FindAlbum.css";
 function FindAlbum() {
   const [getApi, buildQueryString] = useApiContext();
   const [albumSearch, setAlbumSearch] = useState("");
-  const [apiJson, setApiJson] = useState(null);
+  const [albumJson, setAlbumJson] = useState([]);
+  const [isResultsShown, setIsResultsShown] = useState(false);
   const debouncedAlbumSearch = useDebounce(albumSearch, 1000);
 
   //look up use of useCallBack
@@ -28,8 +29,9 @@ function FindAlbum() {
       const albumData = JSON.parse(
         results.data.slice(9, -4).replace(/\u21b5/g, "")
       );
-      setApiJson(albumData);
-      console.log(apiJson.results[1]);
+      setAlbumJson(albumData.results);
+      setIsResultsShown(true);
+      console.log(albumJson);
     },
     [buildQueryString, getApi]
   );
@@ -38,13 +40,23 @@ function FindAlbum() {
     if (debouncedAlbumSearch) {
       SearchAlbum(debouncedAlbumSearch);
     } else if (debouncedAlbumSearch === "") {
-      setApiJson(null);
+      setAlbumJson(null);
     }
   }, [debouncedAlbumSearch, SearchAlbum]);
 
   //display search results from api response.
-  const searchResults = () => {
-    return <h1>Testing Search Results</h1>;
+  const SearchResults = ({ item }) => {
+    return (
+      <div className="search-results-flex" style={{ display: "flex" }}>
+        <div className="search-result-image">
+          <img src={item.artworkUrl60} alt="Artist's Album" />
+        </div>
+        <div className="search-result-information">
+          <p>{item.collectionName}</p>
+          <p>{item.artistName}</p>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -56,7 +68,17 @@ function FindAlbum() {
         placeholder="Find Album"
         onChange={(e) => setAlbumSearch(e.target.value)}
       />
-      {apiJson && <img src={apiJson.results[1].artworkUrl60} alt="" />}
+      {isResultsShown ? (
+        <div className="search-results-container">
+          {albumJson.map((item, index) => (
+            <div key={index} className="search-results">
+              <SearchResults item={item} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <h1>Hello</h1>
+      )}
     </div>
   );
 }
