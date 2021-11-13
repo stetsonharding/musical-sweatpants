@@ -24,10 +24,10 @@
 
 /* Search Results */
 .search-results-container {
-  width: 350px;
+  width: 327px;
   height: 400px;
   overflow: auto;
-  margin: -30px 20px;
+  margin: -30px 25px;
   border-radius: 26px;
   box-shadow: 1px 1px 1px rgb(189, 190, 190);
   background-color: #f3efef;
@@ -35,7 +35,7 @@
 
 .search-results-flex {
   display: flex;
-  margin: 10px;
+  margin: 16px;
 }
 
 .search-result-information p {
