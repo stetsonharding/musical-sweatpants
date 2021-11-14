@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDebounce } from "use-lodash-debounce";
 import { useApiContext } from "../../providers/ApiProvider";
-import { useCurrentAlbumProvider } from "../../providers/CurrentAlbumProvider";
+// import { useCurrentAlbumProvider } from "../../providers/CurrentAlbumProvider";
 
 import "../../css/FindAlbum.css";
 
@@ -12,14 +12,14 @@ function FindAlbum() {
   const [isResultsShown, setIsResultsShown] = useState(false);
   const debouncedAlbumSearch = useDebounce(albumSearch, 1000);
 
-  //look up use of useCallBack
+  //this function will run if query or getapi function has changed
   const SearchAlbum = useCallback(
     async (input) => {
       const baseUrl = "https://itunes.apple.com/search?";
+      //Only search for music albums on api
       const urlAlbumOptions = {
-        //   country: 'us',
-        //   media: 'music',
-        //   entity: 'album',
+        media: "music",
+        entity: "album",
         callback: "getApi",
         term: input,
       };
@@ -40,14 +40,14 @@ function FindAlbum() {
     if (debouncedAlbumSearch) {
       SearchAlbum(debouncedAlbumSearch);
     } else if (debouncedAlbumSearch === "") {
-      setAlbumJson(null);
+      setAlbumJson([]);
     }
   }, [debouncedAlbumSearch, SearchAlbum]);
 
   //display search results from api response.
   const SearchResults = ({ item }) => {
     return (
-      <div className="search-results-flex" style={{ display: "flex" }}>
+      <div className="search-results-flex">
         <div className="search-result-image">
           <img src={item.artworkUrl60} alt="Artist's Album" />
         </div>
@@ -59,6 +59,7 @@ function FindAlbum() {
     );
   };
 
+  //if there is search results display them, if not display nothing.
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
@@ -68,7 +69,7 @@ function FindAlbum() {
         placeholder="Find Album"
         onChange={(e) => setAlbumSearch(e.target.value)}
       />
-      {isResultsShown ? (
+      {isResultsShown && albumJson.length > 1 ? (
         <div className="search-results-container">
           {albumJson.map((item, index) => (
             <div key={index} className="search-results">
@@ -76,9 +77,7 @@ function FindAlbum() {
             </div>
           ))}
         </div>
-      ) : (
-        <h1>Hello</h1>
-      )}
+      ) : null}
     </div>
   );
 }
