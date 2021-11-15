@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDebounce } from "use-lodash-debounce";
 import { useApiContext } from "../../providers/ApiProvider";
-// import { useCurrentAlbumProvider } from "../../providers/CurrentAlbumProvider";
+import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 
 import "../../css/FindAlbum.css";
 
 function FindAlbum() {
   const [getApi, buildQueryString] = useApiContext();
+  const [currentAlbum, setCurrentAlbum] = useCurrentAlbumContext();
   const [albumSearch, setAlbumSearch] = useState("");
   const [albumJson, setAlbumJson] = useState([]);
   const [isResultsShown, setIsResultsShown] = useState(false);
@@ -31,7 +32,7 @@ function FindAlbum() {
       );
       setAlbumJson(albumData.results);
       setIsResultsShown(true);
-      console.log(albumJson);
+      // console.log(albumJson);
     },
     [buildQueryString, getApi]
   );
@@ -44,10 +45,14 @@ function FindAlbum() {
     }
   }, [debouncedAlbumSearch, SearchAlbum]);
 
+  const testing = (album) => {
+    setCurrentAlbum(album);
+  };
+
   //display search results from api response.
   const SearchResults = ({ item }) => {
     return (
-      <div className="search-results-flex">
+      <div onClick={() => testing(item)} className="search-results-flex">
         <div className="search-result-image">
           <img src={item.artworkUrl60} alt="Artist's Album" />
         </div>
@@ -63,13 +68,18 @@ function FindAlbum() {
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
-      <input
-        className="find-album-input"
-        type="search"
-        placeholder="Find Album"
-        onChange={(e) => setAlbumSearch(e.target.value)}
-      />
-      {isResultsShown && albumJson.length > 1 ? (
+      {currentAlbum ? (
+        <SearchResults item={currentAlbum} />
+      ) : (
+        <input
+          className="find-album-input"
+          type="search"
+          placeholder="Find Album"
+          onChange={(e) => setAlbumSearch(e.target.value)}
+        />
+      )}
+
+      {isResultsShown && albumJson.length > 1 && !currentAlbum ? (
         <div className="search-results-container">
           {albumJson.map((item, index) => (
             <div key={index} className="search-results">
