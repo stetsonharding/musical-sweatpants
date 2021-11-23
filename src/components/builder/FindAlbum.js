@@ -47,6 +47,7 @@ function FindAlbum() {
 
   const testing = (album) => {
     setCurrentAlbum(album);
+    // console.log(currentAlbum);
   };
 
   //display search results from api response.
@@ -64,12 +65,23 @@ function FindAlbum() {
     );
   };
 
-  //if there is search results display them, if not display nothing.
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
       {currentAlbum ? (
-        <SearchResults item={currentAlbum} />
+        //deletes current album, resets search
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            paddingLeft: "20px",
+            cursor: "pointer",
+          }}
+        >
+          <h5 onClick={() => [setCurrentAlbum(null), setAlbumSearch("")]}>X</h5>
+          <SearchResults item={currentAlbum} />
+        </div>
       ) : (
         <input
           className="find-album-input"
@@ -79,6 +91,7 @@ function FindAlbum() {
         />
       )}
 
+      {/* all API results */}
       {isResultsShown && albumJson.length > 1 && !currentAlbum ? (
         <div className="search-results-container">
           {albumJson.map((item, index) => (

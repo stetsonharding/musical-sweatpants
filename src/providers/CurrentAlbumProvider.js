@@ -4,9 +4,9 @@ export const CurrentAlbumContext = createContext(null);
 export const useCurrentAlbumContext = () => useContext(CurrentAlbumContext);
 
 export const CurrentAlbumProvider = ({ children }) => {
-  const [currentAlbum, setCurrentAlbum] = useState();
+  const [currentAlbum, setCurrentAlbum] = useState(null);
 
-  console.log(currentAlbum);
+  // console.log(currentAlbum);
   return (
     <CurrentAlbumContext.Provider value={[currentAlbum, setCurrentAlbum]}>
       {children}
