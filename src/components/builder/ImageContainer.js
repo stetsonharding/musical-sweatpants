@@ -15,15 +15,19 @@ function ImageContainer() {
   return (
     <div className="sweatpants-container">
       <div className="sweapants-images">
-        <img
-          src={currentAlbum && currentAlbum.artworkUrl60}
-          alt={currentAlbum && "Album Cover"}
-        />
-        <h4> {currentAlbum && currentAlbum.artistName}</h4>
+        <h4 className="artist-name-print">
+          {" "}
+          {currentAlbum && currentAlbum.artistName}
+        </h4>
         <img
           className="sweatpants_frontview"
           src={frontSide}
           alt="Front View of Sweatpants"
+        />
+        <img
+          className="album-cover-print"
+          src={currentAlbum && currentAlbum.artworkUrl60}
+          alt={currentAlbum && "Album Cover"}
         />
         <img
           className="sweatpants_backview"
