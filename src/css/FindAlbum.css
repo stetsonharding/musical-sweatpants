@@ -43,22 +43,3 @@
   font-size: 12px;
   padding-left: 5px;
 }
-
-/* Testing */
-/* Scroll bar styles for album results */
-/* .search-results-container::-webkit-scrollbar {
-  width: 20px;
-}
-
-.search-results-container::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-
-  margin: 30px;
-  border-radius: 5px;
-}
-
-.search-results-container::-webkit-scrollbar-thumb {
-  background-color: rgb(25, 236, 236);
-  outline: 1px solid slategrey;
-  border-radius: 5px;
-}
