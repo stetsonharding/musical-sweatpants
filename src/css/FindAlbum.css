@@ -44,8 +44,10 @@
   padding-left: 5px;
 }
 
-.search-results-container::-webkit-scrollbar {
-  width: 0.5em;
+/* Testing */
+/* Scroll bar styles for album results */
+/* .search-results-container::-webkit-scrollbar {
+  width: 20px;
 }
 
 .search-results-container::-webkit-scrollbar-track {
