@@ -22,10 +22,9 @@ function MainContent() {
       </div>
       {/* size btns */}
       <div className="size-text-container">
-      <p id="size-text">Size</p>
+        <p id="size-text">Size</p>
       </div>
       <div className="size-buttons-container">
-        
         <SizeButtons size="XS" />
         <SizeButtons size="S" />
         <SizeButtons size="M" />

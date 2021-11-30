@@ -1,13 +1,23 @@
-import React from 'react'
+import React from "react";
 
-import "../../css/SizeButtons.css"
+import "../../css/SizeButtons.css";
+
+import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
 
 function SizeButtons(props) {
-    return (
-        <div className="container">
-            <button className="size-btn">{props.size}</button>
-        </div>
-    )
+  const { isSizeButtonClicked, getSweatpantSize } = useSweatpantSizeContext();
+
+  return (
+    <div className="container">
+      <button
+        onClick={(e) => getSweatpantSize(e)}
+        value={props.size}
+        className={"size-btn"}
+      >
+        {props.size}
+      </button>
+    </div>
+  );
 }
 
-export default SizeButtons
+export default SizeButtons;
