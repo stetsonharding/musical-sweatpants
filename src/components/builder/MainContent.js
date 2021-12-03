@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "../../css/MainContent.css";
+
+import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
 
 //components
 import FindAlbum from "./FindAlbum";
 import SizeButtons from "./SizeButtons";
 
 function MainContent() {
+  const { sweatPantSize } = useSweatpantSizeContext();
+
   return (
     <div className="main-container">
       <div className="main-information">
@@ -25,13 +29,23 @@ function MainContent() {
         <p id="size-text">Size</p>
       </div>
       <div className="size-buttons-container">
-        <SizeButtons size="XS" />
+        {/* [<SizeButtons size="XS" />
         <SizeButtons size="S" />
         <SizeButtons size="M" />
         <SizeButtons size="L" />
-        <SizeButtons size="XL" />
+        <SizeButtons size="XL" />] */}
+        {["XS", "S", "M", "L", "XL"].map((item, index) => (
+          <div key={index}>
+            <SizeButtons size={item} />
+          </div>
+        ))}
       </div>
-      <button className="add-to-cart-btn">
+      <button
+        className={
+          sweatPantSize !== "" ? "add-to-cart-btn" : "add-to-cart-btn-disabled"
+        }
+        disabled={sweatPantSize !== "" ? true : false}
+      >
         <span>Add to cart</span>
       </button>
     </div>
