@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import "../../css/MainContent.css";
 
 import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
+import { useAddToCartContext } from "../../providers/AddToCartProvider";
 
 //components
 import FindAlbum from "./FindAlbum";
@@ -10,6 +11,7 @@ import SizeButtons from "./SizeButtons";
 
 function MainContent() {
   const { sweatPantSize } = useSweatpantSizeContext();
+  const { cart, addToCart } = useAddToCartContext();
 
   return (
     <div className="main-container">
@@ -24,16 +26,12 @@ function MainContent() {
       <div className="find-album-container">
         <FindAlbum />
       </div>
+
       {/* size btns */}
       <div className="size-text-container">
         <p id="size-text">Size</p>
       </div>
       <div className="size-buttons-container">
-        {/* [<SizeButtons size="XS" />
-        <SizeButtons size="S" />
-        <SizeButtons size="M" />
-        <SizeButtons size="L" />
-        <SizeButtons size="XL" />] */}
         {["XS", "S", "M", "L", "XL"].map((item, index) => (
           <div key={index}>
             <SizeButtons size={item} />
@@ -46,7 +44,7 @@ function MainContent() {
         }
         disabled={sweatPantSize !== "" ? true : false}
       >
-        <span>Add to cart</span>
+        <span onClick={() => addToCart()}>Add to cart - $60</span>
       </button>
     </div>
   );

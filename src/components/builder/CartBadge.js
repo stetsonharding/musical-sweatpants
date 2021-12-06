@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import "../../css/CartBadge.css";
 
+import CartItems from "../CartItems";
+
 function CartBadge() {
   const [isQuickCartShown, setIsQuickCartShown] = useState(false);
 
@@ -24,7 +26,12 @@ function CartBadge() {
 }
 
 function QuickCartView() {
-  return <div className="quick-cart-container"></div>;
+  return (
+    <div className="quick-cart-container">
+      <h3 id="quick-cart-title">Your Cart</h3>
+      <CartItems />
+    </div>
+  );
 }
 
 export default CartBadge;
