@@ -4,6 +4,7 @@ import "../../css/MainContent.css";
 
 import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
 import { useAddToCartContext } from "../../providers/AddToCartProvider";
+import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 
 //components
 import FindAlbum from "./FindAlbum";
@@ -12,6 +13,7 @@ import SizeButtons from "./SizeButtons";
 function MainContent() {
   const { sweatPantSize } = useSweatpantSizeContext();
   const { cart, addToCart } = useAddToCartContext();
+  const [currentAlbum] = useCurrentAlbumContext();
 
   return (
     <div className="main-container">
@@ -44,7 +46,7 @@ function MainContent() {
         }
         disabled={sweatPantSize !== "" ? true : false}
       >
-        <span onClick={() => addToCart()}>Add to cart - $60</span>
+        <span onClick={() => addToCart(currentAlbum)}>Add to cart - $60</span>
       </button>
     </div>
   );

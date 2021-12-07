@@ -8,12 +8,9 @@ export const AddToCartProvider = ({ children }) => {
   const [price, setPrice] = useState(60);
 
   //Add item to cart
-  const addToCart = (cart, price, size, type) => {
+  const addToCart = (currentAlbum, price, size, type) => {
     const newItem = {
-      cart,
-      price,
-      size,
-      type,
+      currentAlbum,
     };
     setCart((oldItems) => [...oldItems, newItem]);
   };
