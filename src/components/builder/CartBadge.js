@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import "../../css/CartBadge.css";
 
 import CartItems from "../CartItems";
+import { useAddToCartContext } from "../../providers/AddToCartProvider";
 
 function CartBadge() {
   const [isQuickCartShown, setIsQuickCartShown] = useState(false);
+  const { cart } = useAddToCartContext();
 
   const showQuickCart = () => {
     setIsQuickCartShown(!isQuickCartShown);
@@ -19,7 +21,9 @@ function CartBadge() {
         style={{
           border: isQuickCartShown ? "1px solid rgb(7, 188, 233)" : null,
         }}
-      ></div>
+      >
+        {cart.length}
+      </div>
       ;{isQuickCartShown && <QuickCartView />}
     </>
   );
@@ -29,6 +33,7 @@ function QuickCartView() {
   return (
     <div className="quick-cart-container">
       <h3 id="quick-cart-title">Your Cart</h3>
+
       <CartItems />
     </div>
   );
