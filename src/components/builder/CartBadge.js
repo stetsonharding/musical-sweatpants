@@ -20,11 +20,17 @@ function CartBadge() {
         className="cart-badge"
         style={{
           border: isQuickCartShown ? "1px solid rgb(7, 188, 233)" : null,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "rgb(7, 188, 233)",
         }}
       >
-        {cart.length}
+        {" "}
+        <p>{cart.length}</p>
       </div>
-      ;{isQuickCartShown && <QuickCartView />}
+
+      {isQuickCartShown && <QuickCartView />}
     </>
   );
 }

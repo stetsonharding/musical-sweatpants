@@ -1,6 +1,7 @@
 import React from "react";
 
 import { useAddToCartContext } from "../providers/AddToCartProvider";
+import backSide from "../assets/backside.png";
 
 export default function CartItems() {
   const { cart } = useAddToCartContext();
@@ -12,6 +13,11 @@ export default function CartItems() {
           <div key={index} className="search-results-flex">
             <div className="cart-item-flex">
               <img src={item.currentAlbum.artworkUrl60} alt="Artist's Album" />
+              {/* <img
+                src={backSide}
+                alt="backside sweatpants"
+                style={{ width: "20px", height: "45px", position: "relative" }}
+              /> */}
             </div>
             <div
               className="search-result-information"
