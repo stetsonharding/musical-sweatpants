@@ -38,7 +38,9 @@ function CartBadge() {
 function QuickCartView() {
   return (
     <div className="quick-cart-container">
-      <h3 id="quick-cart-title">Your Cart</h3>
+      <h3 id="quick-cart-title" style={{ textAlign: "center" }}>
+        Your Cart
+      </h3>
 
       <CartItems />
     </div>

@@ -16,9 +16,16 @@ export const AddToCartProvider = ({ children }) => {
   };
 
   console.log(cart);
+  const removeCartItem = (deletedItem) => {
+    setCart((prevItems) =>
+      prevItems.filter(
+        (item) => item.currentAlbum.artistName !== deletedItem.artistName
+      )
+    );
+  };
 
   return (
-    <AddToCartContext.Provider value={{ cart, addToCart }}>
+    <AddToCartContext.Provider value={{ cart, addToCart, removeCartItem }}>
       {children}
     </AddToCartContext.Provider>
   );

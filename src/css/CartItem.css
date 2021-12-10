@@ -1,0 +1,25 @@
+.cart-item-information {
+  display: "flex";
+  justify-content: "center";
+  align-items: "flex-start";
+  flex-direction: "column";
+  margin: "2rem";
+}
+
+.cart-item-image-container {
+  margin: 0 0.6rem;
+}
+
+/* Remove Item */
+.remove-item-container button {
+  font-size: 0.6rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+.remove-item-container button:hover {
+  color: rgb(41, 119, 184);
+  text-decoration: underline;
+}
+/* =========== */
