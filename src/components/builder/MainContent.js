@@ -12,7 +12,7 @@ import SizeButtons from "./SizeButtons";
 
 function MainContent() {
   const { sweatPantSize } = useSweatpantSizeContext();
-  const { cart, addToCart } = useAddToCartContext();
+  const { addToCart } = useAddToCartContext();
   const [currentAlbum] = useCurrentAlbumContext();
 
   return (
