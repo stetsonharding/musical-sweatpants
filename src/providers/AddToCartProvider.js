@@ -7,10 +7,11 @@ export const AddToCartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   //Add item to cart
-  const addToCart = (currentAlbum, size) => {
+  const addToCart = (currentAlbum, size, price) => {
     const newItem = {
       currentAlbum,
       size,
+      price,
     };
     setCart((oldItems) => [...oldItems, newItem]);
   };
@@ -19,7 +20,7 @@ export const AddToCartProvider = ({ children }) => {
   const removeCartItem = (deletedItem) => {
     setCart((prevItems) =>
       prevItems.filter(
-        (item) => item.currentAlbum.artistName !== deletedItem.artistName
+        (item) => item.currentAlbum.collectionId !== deletedItem.collectionId
       )
     );
   };

@@ -1,9 +1,25 @@
+.cart-item-container {
+  overflow: auto;
+  height: 150px;
+}
+
 .cart-item-information {
   display: "flex";
   justify-content: "center";
   align-items: "flex-start";
   flex-direction: "column";
   margin: "2rem";
+}
+
+.cart-item-information p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.cart-item-information p:nth-child(2) {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
 }
 
 .cart-item-image-container {

@@ -46,7 +46,7 @@ function MainContent() {
         }
         disabled={sweatPantSize !== "" ? true : false}
       >
-        <span onClick={() => addToCart(currentAlbum, sweatPantSize)}>
+        <span onClick={() => addToCart(currentAlbum, sweatPantSize, 60)}>
           Add to cart - $60
         </span>
       </button>

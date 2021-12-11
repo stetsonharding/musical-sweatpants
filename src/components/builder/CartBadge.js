@@ -36,6 +36,17 @@ function CartBadge() {
 }
 
 function QuickCartView() {
+  const { cart } = useAddToCartContext();
+
+  //get total price
+  const totalPrice = (cart) => {
+    let total = 0;
+    for (let i = 0; i < cart.length; i++) {
+      total += cart[i].price;
+    }
+    return total;
+  };
+
   return (
     <div className="quick-cart-container">
       <h3 id="quick-cart-title" style={{ textAlign: "center" }}>
@@ -43,6 +54,14 @@ function QuickCartView() {
       </h3>
 
       <CartItems />
+
+      <div
+        className="cart-total-price"
+        style={{ display: "flex", justifyContent: "space-evenly" }}
+      >
+        <p id="total-price">Total:</p>
+        <p>${totalPrice(cart)}</p>
+      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function CartItems() {
   const { cart, removeCartItem } = useAddToCartContext();
 
   return (
-    <div className="glaks" style={{ overflow: "auto", height: "140px" }}>
+    <div className="cart-item-container">
       {cart.map((item, index) => {
         return (
           <div key={index} className="search-results-flex">
@@ -16,10 +16,10 @@ export default function CartItems() {
               <img src={item.currentAlbum.artworkUrl60} alt="Artist's Album" />
             </div>
             <div className="cart-item-information">
-              <p style={{ padding: "0", margin: "0", fontSize: ".9rem" }}>
-                SWEATPANTS - {item.size}
+              <p>
+                SWEATPANTS -{item.size} -${item.price}
               </p>
-              <p style={{ padding: "0", margin: "0", fontSize: ".8rem" }}>
+              <p>
                 {item.currentAlbum.collectionName} -
                 {item.currentAlbum.artistName}
               </p>
