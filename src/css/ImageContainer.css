@@ -21,12 +21,17 @@
 .artist-name-print {
   position: absolute;
   writing-mode: vertical-rl;
-  top: 230px;
-  left: 200px;
+  top: 210px;
+  left: 185px;
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 .album-cover-print {
   position: absolute;
-  top: 120px;
-  left: 460px;
+  top: 73px;
+  left: 435px;
+  height: 120px;
+  width: 120px;
+  opacity: 0.7;
 }
