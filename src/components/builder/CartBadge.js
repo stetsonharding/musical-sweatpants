@@ -62,6 +62,9 @@ function QuickCartView() {
         <p id="total-price">Total:</p>
         <p>${totalPrice(cart)}</p>
       </div>
+      <div className="checkout-btn">
+        <button>Checkout</button>
+      </div>
     </div>
   );
 }

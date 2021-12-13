@@ -23,8 +23,10 @@
 
 /* Quick cart view */
 .quick-cart-container {
-  background-color: rgb(240, 236, 236);
-  width: 500px;
+  background-color: #faf9f9;
+  box-shadow: 0 12px 25px 0 rgba(153, 163, 169, 0.13),
+    0 4px 12px 0 rgba(154, 164, 169, 0.12);
+  width: 400px;
   height: 300px;
   position: absolute;
   top: 60px;
@@ -34,4 +36,29 @@
 
 #quick-cart-title {
   padding: 0 25px;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Checkout Button center, styles and hover */
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-btn button {
+  background-color: rgb(25, 236, 236);
+  width: 230px;
+  border: none;
+  font-size: 1rem;
+  color: rgb(230, 227, 227);
+  font-weight: bold;
+  border-radius: 26px;
+  margin: 2rem 1.5rem;
+  padding: 8px;
+  cursor: pointer;
+}
+.checkout-btn button:hover {
+  opacity: 0.5;
 }

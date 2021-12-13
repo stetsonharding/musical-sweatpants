@@ -43,3 +43,11 @@
   font-size: 12px;
   padding-left: 5px;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-left: 1px solid #e6ecf8;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(25, 236, 236);
+}
