@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import "../../css/CartBadge.css";
 
+import { Link } from "react-router-dom";
+
 import CartItems from "../CartItems";
 import { useAddToCartContext } from "../../providers/AddToCartProvider";
 
@@ -63,7 +65,9 @@ function QuickCartView() {
         <p>${totalPrice(cart)}</p>
       </div>
       <div className="checkout-btn">
-        <button>Checkout</button>
+        <Link to="orderDetails">
+          <button>Checkout</button>
+        </Link>
       </div>
     </div>
   );

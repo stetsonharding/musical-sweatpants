@@ -6,19 +6,28 @@ import SweatpantSizeProvider from "./providers/SweatpantSizeProvider";
 import AddToCartProvider from "./providers/AddToCartProvider";
 import Layout from "./components/builder/Layout";
 
+import OrderInfoLayout from "./components/orderInfo/OrderInfoLayout";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <ApiProvider>
-      <CurrentAlbumProvider>
-        <SweatpantSizeProvider>
-          <AddToCartProvider>
-            <div className="App-container">
-              <Layout />
-            </div>
-          </AddToCartProvider>
-        </SweatpantSizeProvider>
-      </CurrentAlbumProvider>
-    </ApiProvider>
+    <Router>
+      <ApiProvider>
+        <CurrentAlbumProvider>
+          <SweatpantSizeProvider>
+            <AddToCartProvider>
+              <div className="App-container">
+                <Routes>
+                  <Route exact path="/" element={<Layout />} />
+                  <Route path="/orderDetails" element={<OrderInfoLayout />} />
+                </Routes>
+              </div>
+            </AddToCartProvider>
+          </SweatpantSizeProvider>
+        </CurrentAlbumProvider>
+      </ApiProvider>
+    </Router>
   );
 }
 
