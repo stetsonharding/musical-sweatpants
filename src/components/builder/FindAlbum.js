@@ -45,15 +45,18 @@ function FindAlbum() {
     }
   }, [debouncedAlbumSearch, SearchAlbum]);
 
-  const testing = (album) => {
+  //sets current album in state
+  const getCurrentAlbum = (album) => {
     setCurrentAlbum(album);
-    // console.log(currentAlbum);
   };
 
   //display search results from api response.
   const SearchResults = ({ item }) => {
     return (
-      <div onClick={() => testing(item)} className="search-results-flex">
+      <div
+        onClick={() => getCurrentAlbum(item)}
+        className="search-results-flex"
+      >
         <div className="search-result-image">
           <img src={item.artworkUrl60} alt="Artist's Album" />
         </div>

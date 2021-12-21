@@ -1,0 +1,13 @@
+.order-details-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-details-price h4,
+.order-details-price h5 {
+  font-weight: normal;
+}
+
+.order-details-price #grand-total {
+  font-weight: bold;
+}
