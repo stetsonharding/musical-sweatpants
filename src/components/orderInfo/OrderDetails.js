@@ -39,7 +39,10 @@ export default function OrderDetails() {
           </div>
         );
       })}
+
       {/* //style order details */}
+      {/* if nothing is in shopping cart, disable checkout button. 
+       if already at checkout and user deletes items out of shopping cart, redirect to home page. */}
 
       <div className="order-details-total-container">
         <div className="order-details-price">
