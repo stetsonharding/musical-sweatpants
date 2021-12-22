@@ -39,6 +39,8 @@ export default function OrderDetails() {
           </div>
         );
       })}
+      {/* //style order details */}
+
       <div className="order-details-total-container">
         <div className="order-details-price">
           <h5>Sub Total</h5>
