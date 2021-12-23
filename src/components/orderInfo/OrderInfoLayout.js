@@ -18,7 +18,8 @@ export default function OrderInfoLayout() {
           width: "50%",
           height: "100vh",
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: "center",
+          alignItems: "flex-start",
           borderRight: "1.5px solid grey",
         }}
       >

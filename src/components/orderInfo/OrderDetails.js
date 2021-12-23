@@ -14,13 +14,7 @@ export default function OrderDetails() {
 
   console.log(cart);
   return (
-    <div
-      className="order-details-container"
-      style={{
-        width: "450px",
-        margin: "100px",
-      }}
-    >
+    <div className="order-details-container">
       {cart.map((item, index) => {
         return (
           <div key={index} className="search-results-flex">
@@ -40,7 +34,6 @@ export default function OrderDetails() {
         );
       })}
 
-      {/* //style order details */}
       {/* if nothing is in shopping cart, disable checkout button. 
        if already at checkout and user deletes items out of shopping cart, redirect to home page. */}
 

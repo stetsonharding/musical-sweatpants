@@ -1,13 +1,20 @@
-.order-details-price {
-  display: flex;
-  justify-content: space-between;
+/* container */
+.order-details-container {
+  width: 450px;
+  margin-top: 100px;
+  height: 100%;
 }
 
+/* price */
+.order-details-price {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
 .order-details-price h4,
 .order-details-price h5 {
   font-weight: normal;
 }
-
 .order-details-price #grand-total {
   font-weight: bold;
 }

@@ -21,17 +21,11 @@ function CartBadge() {
         onClick={showQuickCart}
         className="cart-badge"
         style={{
-          border: isQuickCartShown ? "1px solid rgb(7, 188, 233)" : null,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "rgb(7, 188, 233)",
+          border: isQuickCartShown && "1px solid rgb(7, 188, 233)",
         }}
       >
-        {" "}
         <p>{cart.length}</p>
       </div>
-
       {isQuickCartShown && <QuickCartView />}
     </>
   );
@@ -39,7 +33,6 @@ function CartBadge() {
 
 function QuickCartView() {
   const { cart } = useAddToCartContext();
-
   //get total price
   const totalPrice = (cart) => {
     let total = 0;
@@ -48,15 +41,13 @@ function QuickCartView() {
     }
     return total;
   };
-
   return (
     <div className="quick-cart-container">
       <h3 id="quick-cart-title" style={{ textAlign: "center" }}>
         Your Cart
       </h3>
-
       <CartItems />
-
+      {/* Total Price */}
       <div
         className="cart-total-price"
         style={{ display: "flex", justifyContent: "space-evenly" }}
@@ -64,11 +55,27 @@ function QuickCartView() {
         <p id="total-price">Total:</p>
         <p>${totalPrice(cart)}</p>
       </div>
+      {/* ======== */}
+      {/* shopping cart message */}
+      <div
+        className="message-container"
+        style={{ textAlign: "center", fontSize: ".8rem" }}
+      >
+        {cart.length === 0 && (
+          <p className="shopping-cart-message">
+            Please add 1+ items to your shopping cart before checkout.
+          </p>
+        )}
+      </div>
+      {/* ======== */}
+
+      {/* Checkout button */}
       <div className="checkout-btn">
         <Link to="orderDetails">
-          <button>Checkout</button>
+          <button disabled={cart.length === 0 ? true : false}>Checkout</button>
         </Link>
       </div>
+      {/* ======== */}
     </div>
   );
 }
