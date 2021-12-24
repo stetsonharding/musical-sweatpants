@@ -38,6 +38,7 @@ export default function OrderDetails() {
        if already at checkout and user deletes items out of shopping cart, redirect to home page. */}
 
       <div className="order-details-total-container">
+        <hr />
         <div className="order-details-price">
           <h5>Sub Total</h5>
           <h4>${subTotal}</h4>

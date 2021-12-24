@@ -1,16 +1,26 @@
 /* container */
 .order-details-container {
   width: 450px;
-  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   height: 100%;
 }
 
 /* price */
 .order-details-price {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 400px;
+  height: 10px;
+  padding: 10px 20px 10px;
 }
+
+.order-details-price:nth-child(odd) {
+  background-color: rgb(207, 207, 207);
+  border-radius: 10px;
+}
+
 .order-details-price h4,
 .order-details-price h5 {
   font-weight: normal;
