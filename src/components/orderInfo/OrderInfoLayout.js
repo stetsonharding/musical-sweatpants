@@ -32,6 +32,7 @@ export default function OrderInfoLayout() {
       >
         <OrderDetails />
       </div>
+     
       <div
         className="order-checkoutform-container"
         style={{
@@ -42,6 +43,7 @@ export default function OrderInfoLayout() {
           alignItems: "center",
         }}
       >
+         
         <OrderForm />
       </div>
     </div>

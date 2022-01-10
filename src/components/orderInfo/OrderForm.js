@@ -5,29 +5,31 @@ import "../../css/OrderForm.css";
 export default function OrderForm() {
   return (
     <div>
-      <h1>Shipping Information</h1>
+    <h1 style={{textAlign: 'center', fontSize: '1.6rem'}}>Shipping Information</h1>
       <form id="order-form-checkout">
         <div className="order-form-name">
           <input className="name-input" type="text" placeholder="First Name" />
           <input className="name-input" type="text" placeholder="Last Name" />
         </div>
         <div className="order-form-address">
-          <input className="inputz" type="text" placeholder="Address" />
+          <input className="user-input-address" type="text" placeholder="Address" />
           <br />
           <input
-            className="inputz"
+            className="user-input-address"
             type="text"
             placeholder="Apartment, suite, etc"
           />
           <br />
-          <input className="inputz" type="text" placeholder="City" />
+          <input className="user-input-address" type="text" placeholder="City" />
+          </div>
+          </form>
 
-          <div className="order-form-select">
+          <div className="form-select-container">
             {/* country */}
             <select
               id="country"
               name="country"
-              className="order-form-country-selection"
+              className="form-country-selection"
             >
               <option defaultValue>Country</option>
               <option value="Afghanistan">Afghanistan</option>
@@ -331,7 +333,7 @@ export default function OrderForm() {
             </select>
 
             {/* State */}
-            <select className="order-form-state-selection" name="state">
+            <select className="form-state-selection" name="state">
               <option defaultValue>State</option>
               <option value="al">Alabama</option>
               <option value="ak">Alaska</option>
@@ -385,11 +387,11 @@ export default function OrderForm() {
               <option value="wi">Wisconsin</option>
               <option value="wy">Wyoming</option>
             </select>
-            <input type="text" placeholder="Zip Code" />
+            <input type="text" className="user-input-zip" placeholder="Zip Code" />
           </div>
-        </div>
-        <button>Continue to Billing</button>
-      </form>
+       
+        <button className="continute-btn">Continue to Billing</button>
+     
     </div>
   );
 }
