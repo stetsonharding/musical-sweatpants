@@ -13,8 +13,11 @@ const [shippingData, setShippingData] = useState(addressData)
 return(
     <OrderFormContext.Provider
     value={
-        shippingData,
-        setShippingData
+        {
+            shippingData,
+            setShippingData
+        }
+       
     }
     >
    {children}

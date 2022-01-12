@@ -12,15 +12,17 @@ function handleChange(e) {
   })
 }
 
+
   return (
     <div className='form-input-flex'>
       {inputData.map((data, index) => {
+          console.log(data)
         return (
           <div key={placeholder[index]}
           className='input-container'
           >
             <input
-            placholder={placeholder[index]}
+            placeholder={placeholder[index]}
             type='text'
             name={inputData[index]}
             value={inputData[data]}
@@ -28,6 +30,7 @@ function handleChange(e) {
             onChange={handleChange}
             />
             </div>
+        
         )
       })}
       

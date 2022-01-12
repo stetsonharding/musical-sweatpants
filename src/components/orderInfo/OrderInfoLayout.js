@@ -5,6 +5,7 @@ import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
+import ShippingForm from "./ShippingForm";
 
 
 export default function OrderInfoLayout() {
@@ -45,7 +46,8 @@ export default function OrderInfoLayout() {
       >
          
       
-        {/* Breadcrums goes here */}
+        {/* Breadcrumbs goes here */}
+        <ShippingForm />
       </div>
     </div>
   );

@@ -5,7 +5,9 @@ import FormInput from "./FormInput"
 
 function ShippingForm() {
     const {shippingData, setShippingData} = useOrderFormContext();
-    const history = useHistory();
+    // const history = useHistory();
+
+    console.log(shippingData)
     return (
         <div className="shipping-form-container">
             <h1 className="title-bold">Shipping Information</h1>
@@ -40,9 +42,9 @@ function ShippingForm() {
 
             <FormInput
             formData={shippingData}
-            inputData={['county, state, zip']}
+            inputData={['county', 'state', 'zip']}
             setinputData={setShippingData}
-            placeholder={['Country, State, Zip']}
+            placeholder={['Country', 'State', 'Zip']}
             />
 
             <button>Continue to Billing</button>
