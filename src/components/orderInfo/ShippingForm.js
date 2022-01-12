@@ -22,28 +22,28 @@ function ShippingForm() {
             <FormInput
             formData={shippingData}
             inputData={['address']}
-            setinputData={setShippingData}
+            setInputData={setShippingData}
             placeholder={['Address']}
             />
 
             <FormInput
             formData={shippingData}
             inputData={['subaddress']}
-            setinputData={setShippingData}
+            setInputData={setShippingData}
             placeholder={['Sub Address']}
             />
 
             <FormInput
             formData={shippingData}
             inputData={['city']}
-            setinputData={setShippingData}
+            setInputData={setShippingData}
             placeholder={['City']}
             />
 
             <FormInput
             formData={shippingData}
             inputData={['county', 'state', 'zip']}
-            setinputData={setShippingData}
+            setInputData={setShippingData}
             placeholder={['Country', 'State', 'Zip']}
             />
 

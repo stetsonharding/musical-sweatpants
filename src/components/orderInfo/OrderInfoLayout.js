@@ -1,11 +1,14 @@
 import React from "react";
 
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
+import Breadcrumb from "./Breadcrumb";
+import routes from "./orderFormRouteConfig";
 
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
-import ShippingForm from "./ShippingForm";
+
+import { Route, Routes} from "react-router-dom";
 
 
 export default function OrderInfoLayout() {
@@ -46,8 +49,24 @@ export default function OrderInfoLayout() {
       >
          
       
-        {/* Breadcrumbs goes here */}
-        <ShippingForm />
+        {/* Breadcrumbs*/}
+        <Routes>
+          {routes.map(({path, Component}, key) => (
+            <Route
+              exact
+              path={path}
+              key={key}
+              return={props => {
+                return(
+                  <div className='forms-wrapper'>
+                    <Breadcrumb {...props} routes={routes}/>
+                    <Component {...props}/>
+                  </div>
+                )
+              }}
+            />
+          ))}
+        </Routes>
       </div>
     </div>
   );
