@@ -5,7 +5,7 @@ import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
-import OrderForm from "./OrderForm";
+
 
 export default function OrderInfoLayout() {
   const [currentAlbum] = useCurrentAlbumContext();
@@ -44,7 +44,8 @@ export default function OrderInfoLayout() {
         }}
       >
          
-        <OrderForm />
+      
+        {/* Breadcrums goes here */}
       </div>
     </div>
   );
