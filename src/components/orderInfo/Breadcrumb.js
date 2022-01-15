@@ -14,6 +14,7 @@ export default function Breadcrumb(props) {
         })
     },[props.match.path, props.routes])
 
+    console.log(crumbs)
     return (
         <div>
             
