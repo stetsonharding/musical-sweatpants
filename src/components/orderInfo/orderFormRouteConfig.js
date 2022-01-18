@@ -1,7 +1,10 @@
 import ShippingForm from "./ShippingForm"
 
 const routeConfig = [
-    {path: "/orderDetails/shipping", name: "shipping", component: ShippingForm}
+    { path: "/", name: "Cart"},
+    {path: "/orderDetails/shipping", name: "shipping", Component: ShippingForm},
+    {path: "/orderDetails/shipping", name: "shipping", Component: ShippingForm},
+    {path: "/orderDetails/shipping", name: "shipping", Component: ShippingForm},
 ];
 
 export default routeConfig;

@@ -4,6 +4,8 @@ import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 import Breadcrumb from "./Breadcrumb";
 import routes from "./orderFormRouteConfig";
 
+import ShippingForm from "./ShippingForm";
+
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
@@ -13,7 +15,7 @@ import { Route, Routes} from "react-router-dom";
 
 export default function OrderInfoLayout() {
   const [currentAlbum] = useCurrentAlbumContext();
-
+  
   return (
     <div
       className="order-info-layout-container"
@@ -50,6 +52,7 @@ export default function OrderInfoLayout() {
          
       
         {/* Breadcrumbs*/}
+       {console.log(routes)}
         <Routes>
           {routes.map(({path, Component}, key) => (
             <Route
