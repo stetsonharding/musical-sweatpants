@@ -1,16 +1,9 @@
 import React from "react";
 
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
-
-
-
-
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
-
-
-
 
 export default function OrderInfoLayout() {
   const [currentAlbum] = useCurrentAlbumContext();
@@ -49,7 +42,7 @@ export default function OrderInfoLayout() {
         }}
       >
          
-      
+      {/* Breadcrumbs */}
     
       </div>
     </div>
