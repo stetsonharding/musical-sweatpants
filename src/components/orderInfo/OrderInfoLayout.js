@@ -1,4 +1,5 @@
 import React from "react";
+import FormBreadcrumbs from "./FormBreadcrumbs";
 
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 //components
@@ -6,7 +7,7 @@ import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
 
 export default function OrderInfoLayout() {
-  const [currentAlbum] = useCurrentAlbumContext();
+  // const [currentAlbum] = useCurrentAlbumContext();
   
   return (
     <div
@@ -43,6 +44,7 @@ export default function OrderInfoLayout() {
       >
          
       {/* Breadcrumbs */}
+      <FormBreadcrumbs />
     
       </div>
     </div>
