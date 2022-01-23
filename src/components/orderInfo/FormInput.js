@@ -28,6 +28,7 @@ function handleChange(e) {
             value={inputData[data]}
             className='input'
             onChange={handleChange}
+            style={{borderRadius: '10px', padding: ' 10px', width: '500px', border: 'none'}}
             />
             </div>
         

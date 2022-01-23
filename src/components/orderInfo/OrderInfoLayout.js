@@ -8,6 +8,7 @@ import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
+import ShippingForm from "./ShippingForm"
 
 
 
@@ -49,7 +50,7 @@ export default function OrderInfoLayout() {
         }}
       >
          
-      
+      <ShippingForm/>
     
       </div>
     </div>
