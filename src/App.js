@@ -8,7 +8,7 @@ import Layout from "./components/builder/Layout";
 
 import OrderInfoLayout from "./components/orderInfo/OrderInfoLayout";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
             <AddToCartProvider>
               <OrderFormProvider>
               <div className="App-container">
-                <Routes>
-                  <Route exact path="/" element={<Layout />} />
-                  <Route path="/orderDetails" element={<OrderInfoLayout />} />
-                </Routes>
+                <Switch>
+                  <Route exact path="/" component={Layout} />
+                  <Route path="/orderDetails" component={OrderInfoLayout} />
+                </Switch>
               </div>
               </OrderFormProvider>
             </AddToCartProvider>
