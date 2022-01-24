@@ -1,58 +1,26 @@
 import React from "react";
 
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
-
-
-
-
 //components
 import CartBadge from "../builder/CartBadge";
 import OrderDetails from "./OrderDetails";
 import ShippingForm from "./ShippingForm"
 
-
-
-
 export default function OrderInfoLayout() {
   const [currentAlbum] = useCurrentAlbumContext();
   
   return (
-    <div
-      className="order-info-layout-container"
-      style={{
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <CartBadge />
-      <div
-        className="order-details-container"
-        style={{
-          width: "50%",
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <OrderDetails />
-      </div>
-     
-      <div
-        className="order-checkoutform-container"
-        style={{
-          width: "50%",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-         
+   
+    <div>
+     <CartBadge />
+     <div style={{display: 'flex', alignItems: 'center', height: '100vh', justifyContent: 'space-evenly' }}>
+      <OrderDetails /> 
       <ShippingForm/>
-    
       </div>
+
     </div>
+ 
+    
+   
   );
 }

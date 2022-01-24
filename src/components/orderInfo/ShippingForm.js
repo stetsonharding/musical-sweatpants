@@ -1,16 +1,15 @@
 import React from 'react';
 import { useOrderFormContext } from "../../providers/OrderFormProvider";
-import { useHistory } from "react-router-dom";
 import FormInput from "./FormInput"
 
 function ShippingForm() {
     const {shippingData, setShippingData} = useOrderFormContext();
-    // const history = useHistory();
 
     console.log(shippingData)
     return (
-        <div className="shipping-form-container">
-            <h1 className="title-bold">Shipping Information</h1>
+        <>
+        <div className="shipping-form-container" style={{ width: '500px', textAlign: 'center'}}>
+            <h2 className="title-bold" style={{textAlign: 'center'}}>Shipping Information</h2>
             
             <FormInput
             formData={shippingData}
@@ -47,8 +46,10 @@ function ShippingForm() {
             placeholder={['Country', 'State', 'Zip']}
             />
 
-            <button>Continue to Billing</button>
+<button>Continue to Billing</button>
         </div>
+       
+        </>
     )
 }
 
