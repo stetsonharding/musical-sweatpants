@@ -1,9 +1,18 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { useOrderFormContext } from "../../providers/OrderFormProvider";
 import FormInput from "./FormInput"
 
-function ShippingForm() {
+function ShippingForm({setShow}) {
     const {shippingData, setShippingData} = useOrderFormContext();
+    const history = useHistory();
+
+
+    const handleClick = (e) => {
+        // e.stopPropagation();
+    setShow(false)
+
+    }
 
     console.log(shippingData)
     return (
@@ -46,7 +55,7 @@ function ShippingForm() {
             placeholder={['Country', 'State', 'Zip']}
             />
 
-<button>Continue to Billing</button>
+            <button onClick={() => handleClick()}>Continue to Billing</button>
         </div>
        
         </>
