@@ -6,21 +6,36 @@ import FormInput from './FormInput';
 
 export default function BillingForm() {
 
-  const {shippingData,setBillingData, billingData} = useOrderFormContext();
+  const {shippingData, setBillingData, billingData, setShippingData} = useOrderFormContext();
 
-  console.log(billingData)
+
+
+
+  const checkboxClick = (e) => {
+
+ setBillingData({
+  //  ...billingData,
+  //  [e.target.name] : shippingData.value
+
+  //need to fix
+ })
+ 
+
+  
+}
+
+console.log(billingData)
+ console.log(shippingData)
   return (
 
 <>
-
-
 
 <div className="shipping-form-container" style={{ width: '500px', textAlign: 'center'}}>
 <h2 className="title-bold" style={{textAlign: 'center'}}>Billing Information</h2>
 
 <div className="checkbox">
-<input type="checkbox" name="SameAsShipping" onClick={() => console.log("testing")} />
-<label for='sameAsShipping'>Same as Shipping Address </label>
+<input type="checkbox" name="SameAsShipping" onClick={() => checkboxClick()} />
+<label htmlFor='sameAsShipping'>Same as Shipping Address </label>
 </div>
 
 <FormInput
@@ -29,6 +44,7 @@ inputData={['firstname', 'lastname']}
 setInputData={setBillingData}
 placeholder={['First Name', 'Last Name']}
 />
+
 
 <FormInput
 formData={billingData}

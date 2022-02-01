@@ -25,6 +25,7 @@ function ShippingForm({setShow}) {
             inputData={['firstname', 'lastname']}
             setInputData={setShippingData}
             placeholder={['First Name', 'Last Name']}
+           
             />
 
             <FormInput
