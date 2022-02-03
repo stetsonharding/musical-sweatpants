@@ -13,18 +13,8 @@ export default function BillingForm() {
 
   const checkboxClick = (e) => {
 
- setBillingData({
-  // const value = e.target.value
-  // setInputData({
-  //   ...formData,
-  //   [e.target.name]: value
-  // })
-
-  //when box is clicked, add all shipping data to billing data.
- })
+ setBillingData(shippingData)
  
-
-  
 }
 
 console.log(billingData)
@@ -46,6 +36,7 @@ formData={billingData}
 inputData={['firstname', 'lastname']}
 setInputData={setBillingData}
 placeholder={['First Name', 'Last Name']}
+
 />
 
 
