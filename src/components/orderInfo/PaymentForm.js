@@ -1,13 +1,15 @@
 import React from 'react';
 import FormInput from '../orderInfo/FormInput'
+import {useHistory} from "react-router-dom"
 
 import { useOrderFormContext } from '../../providers/OrderFormProvider';
 
 function PaymentForm() {
 
   const {paymentData, setPaymentData, shippingData, setShippingData} = useOrderFormContext();
+  const history = useHistory()
 
-console.log(shippingData.address)
+
 
   return (
     <div className='payment-form-container' style={{ width: '500px', textAlign: 'center'}}>
@@ -56,7 +58,7 @@ console.log(shippingData.address)
   placeholder={["Expiration (MM/YY), Security code"]}
 />
 
-<button>Pay Now</button>
+<button onClick={() => history.push('/orderComplete')}>Pay Now</button>
 
     </div>
   )

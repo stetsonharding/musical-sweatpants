@@ -5,6 +5,7 @@ import SweatpantSizeProvider from "./providers/SweatpantSizeProvider";
 import OrderFormProvider from "./providers/OrderFormProvider"
 import AddToCartProvider from "./providers/AddToCartProvider";
 import Layout from "./components/builder/Layout";
+import OrderComplete from "./components/builder/OrderComplete"
 
 
 import OrderInfoLayout from "./components/orderInfo/OrderInfoLayout";
@@ -23,6 +24,7 @@ function App() {
                 <Switch>
                   <Route exact path="/" component={Layout} />
                   <Route path="/orderDetails" component={OrderInfoLayout} />
+                  <Route path="/orderComplete" component={OrderComplete} />
                 </Switch>
               </div>
               </OrderFormProvider>
