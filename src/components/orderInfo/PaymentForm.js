@@ -1,8 +1,66 @@
 import React from 'react';
 import FormInput from '../orderInfo/FormInput'
 
+import { useOrderFormContext } from '../../providers/OrderFormProvider';
+
 function PaymentForm() {
-  return <div></div>;
+
+  const {paymentData, setPaymentData, shippingData, setShippingData} = useOrderFormContext();
+
+console.log(shippingData.address)
+
+  return (
+    <div className='payment-form-container'>
+
+<h2 className="heavy-text">Billing Infomation</h2>
+
+<h4 className="feature-title light-text">
+  Shipping Address
+</h4>
+
+<FormInput
+  formData={paymentData}
+  inputData={["shipping"]}
+  setInputData={setPaymentData}
+  placeholder={["Shipping Address"]}
+/>
+
+<div className="content-margin">
+  <h4 className="feature-title light-text">
+    Billing Address
+  </h4>
+  <FormInput
+    formData={paymentData}
+    inputData={["billing"]}
+    setInputData={setPaymentData}
+    placeholder={["Billing Address"]}
+  />
+</div>
+
+<FormInput
+  formData={paymentData}
+  inputData={["cardnumber"]}
+  setInputData={setPaymentData}
+  placeholder={["Carn number"]}
+/>
+<FormInput
+  formData={paymentData}
+  inputData={["nameoncard"]}
+  setInputData={setPaymentData}
+  placeholder={["Name on card"]}
+/>
+<FormInput
+  formData={paymentData}
+  inputData={["expiration"]}
+  setInputData={setPaymentData}
+  placeholder={["Expiration (MM/YY), Security code"]}
+/>
+
+
+    </div>
+  )
+  
+
 }
 
 export default PaymentForm;

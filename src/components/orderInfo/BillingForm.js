@@ -4,7 +4,7 @@ import FormInput from './FormInput';
 
 
 
-export default function BillingForm() {
+export default function BillingForm({setShowTwo, setShow}) {
 
   const {shippingData, setBillingData, billingData, setShippingData} = useOrderFormContext();
 
@@ -12,9 +12,13 @@ export default function BillingForm() {
 
 
   const checkboxClick = (e) => {
-
  setBillingData(shippingData)
- 
+}
+
+const handleClick = () =>{
+
+  setShowTwo(true)
+
 }
 
 console.log(billingData)
@@ -78,7 +82,7 @@ setInputData={setBillingData}
 placeholder={['Zip']}
 />
 
-<button>Continue to Payment</button>
+<button onClick={() => handleClick()}>Continue to Payment</button>
 </div>
 </>
   )
