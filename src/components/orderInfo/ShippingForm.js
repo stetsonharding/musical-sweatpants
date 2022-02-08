@@ -10,7 +10,7 @@ function ShippingForm({setShow}) {
 
     const handleClick = (e) => {
         // e.stopPropagation();
-    setShow(false)
+    setShow(1)
 
     }
 

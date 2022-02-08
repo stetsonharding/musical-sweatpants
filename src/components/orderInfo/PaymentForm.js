@@ -10,9 +10,9 @@ function PaymentForm() {
 console.log(shippingData.address)
 
   return (
-    <div className='payment-form-container'>
+    <div className='payment-form-container' style={{ width: '500px', textAlign: 'center'}}>
 
-<h2 className="heavy-text">Billing Infomation</h2>
+<h2 className="heavy-text">Payment Infomation</h2>
 
 <h4 className="feature-title light-text">
   Shipping Address
@@ -56,6 +56,7 @@ console.log(shippingData.address)
   placeholder={["Expiration (MM/YY), Security code"]}
 />
 
+<button>Pay Now</button>
 
     </div>
   )

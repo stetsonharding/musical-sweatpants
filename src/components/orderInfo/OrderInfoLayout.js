@@ -11,8 +11,8 @@ import PaymentForm from "./PaymentForm";
 
 export default function OrderInfoLayout() {
   const [currentAlbum] = useCurrentAlbumContext();
-  const [show, setShow] = useState(true)
-  const [showTwo, setShowTwo] = useState(false)
+  const [show, setShow] = useState(0)
+
   
   return (
    
@@ -23,7 +23,7 @@ export default function OrderInfoLayout() {
 
 
 
-      {show ?  <ShippingForm setShow={setShow}/> : <BillingForm setShowTwo={setShowTwo} /> }
+      {show === 0 ? <ShippingForm setShow={setShow}/> : show === 1 ? <BillingForm setShow={setShow}/> : show === 2 ? <PaymentForm /> : null }
     
       </div>
 

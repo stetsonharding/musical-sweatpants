@@ -4,7 +4,7 @@ import FormInput from './FormInput';
 
 
 
-export default function BillingForm({setShowTwo, setShow}) {
+export default function BillingForm({setShow}) {
 
   const {shippingData, setBillingData, billingData, setShippingData} = useOrderFormContext();
 
@@ -17,7 +17,7 @@ export default function BillingForm({setShowTwo, setShow}) {
 
 const handleClick = () =>{
 
-  setShowTwo(true)
+  setShow(2)
 
 }
 
