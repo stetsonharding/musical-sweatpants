@@ -82,7 +82,7 @@ setInputData={setBillingData}
 placeholder={['Zip']}
 />
 
-<button onClick={() => handleClick()}>Continue to Payment</button>
+<button  className="action-btn" onClick={() => handleClick()}>Continue to Payment</button>
 </div>
 </>
   )

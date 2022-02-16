@@ -16,7 +16,7 @@ export const AddToCartProvider = ({ children }) => {
     setCart((oldItems) => [...oldItems, newItem]);
   };
 
-  console.log(cart);
+  //remove item from cart
   const removeCartItem = (deletedItem) => {
     setCart((prevItems) =>
       prevItems.filter(
@@ -26,7 +26,7 @@ export const AddToCartProvider = ({ children }) => {
   };
 
   return (
-    <AddToCartContext.Provider value={{ cart, addToCart, removeCartItem }}>
+    <AddToCartContext.Provider value={{ cart, addToCart, removeCartItem, setCart }}>
       {children}
     </AddToCartContext.Provider>
   );

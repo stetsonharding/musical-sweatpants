@@ -13,7 +13,7 @@ export const SweatpantsSizeProvider = ({ children }) => {
 
   console.log(sweatPantSize);
   return (
-    <SweatpantSizeContext.Provider value={{ getSweatpantSize, sweatPantSize }}>
+    <SweatpantSizeContext.Provider value={{ getSweatpantSize, sweatPantSize, setSweatpantSize }}>
       {children}
     </SweatpantSizeContext.Provider>
   );

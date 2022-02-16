@@ -18,7 +18,7 @@
   padding-bottom: 0.7rem;
 }
 
-.add-to-cart-btn {
+.action-btn {
   background-color: rgb(25, 236, 236);
   width: 230px;
   border: none;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.add-to-cart-btn-disabled {
+.action-btn-disabled {
   background-color: rgb(25, 236, 236);
   width: 230px;
   border: none;
@@ -45,6 +45,6 @@
   opacity: 0.4;
 }
 
-.add-to-cart-btn:hover {
+.action-btn:hover {
   opacity: 0.7;
 }

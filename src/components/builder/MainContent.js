@@ -42,7 +42,7 @@ function MainContent() {
       </div>
       <button
         className={
-          sweatPantSize !== "" ? "add-to-cart-btn" : "add-to-cart-btn-disabled"
+          sweatPantSize !== "" ? "action-btn" : "action-btn-disabled"
         }
         disabled={sweatPantSize !== "" ? true : false}
       >

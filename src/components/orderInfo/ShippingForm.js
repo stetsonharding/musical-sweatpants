@@ -56,7 +56,7 @@ function ShippingForm({setShow}) {
             placeholder={['Country', 'State', 'Zip']}
             />
 
-            <button onClick={() => handleClick()}>Continue to Billing</button>
+            <button className="action-btn" onClick={() => handleClick()}>Continue to Billing</button>
         </div>
        
         </>
