@@ -12,8 +12,16 @@ import SizeButtons from "./SizeButtons";
 
 function MainContent() {
   const { sweatPantSize } = useSweatpantSizeContext();
-  const { addToCart } = useAddToCartContext();
+  const { addToCart, setAddEffect } = useAddToCartContext();
   const [currentAlbum] = useCurrentAlbumContext();
+
+  const handleAddToCart = () => {
+
+    addToCart(currentAlbum, sweatPantSize, 60)
+    setAddEffect(true)
+
+
+  }
 
   return (
     <div className="main-container">
@@ -46,7 +54,7 @@ function MainContent() {
         }
         disabled={sweatPantSize !== "" ? true : false}
       >
-        <span onClick={() => addToCart(currentAlbum, sweatPantSize, 60)}>
+        <span onClick={() => handleAddToCart()}>
           Add to cart - $60
         </span>
       </button>

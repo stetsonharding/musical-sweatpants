@@ -9,7 +9,7 @@ import { useAddToCartContext } from "../../providers/AddToCartProvider";
 
 function CartBadge() {
   const [isQuickCartShown, setIsQuickCartShown] = useState(false);
-  const { cart } = useAddToCartContext();
+  const { cart, addEffect } = useAddToCartContext();
 
   const showQuickCart = () => {
     setIsQuickCartShown(!isQuickCartShown);
@@ -20,9 +20,7 @@ function CartBadge() {
       <div
         onClick={showQuickCart}
         className="cart-badge"
-        style={{
-          border: isQuickCartShown && "1px solid rgb(7, 188, 233)",
-        }}
+        id={addEffect && "blinking"}
       >
         <p>{cart.length}</p>
       </div>

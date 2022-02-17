@@ -70,3 +70,21 @@
 .checkout-btn button:hover {
   opacity: 0.5;
 }
+
+
+
+
+#blinking {
+  /* border-bottom: 10px solid #9ae2ff; */
+  border: 5px solid #9ae2ff;
+  animation-name: blinking;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes blinking {
+  50% {
+    border-color: #ffcd5f;
+  
+  }
+}

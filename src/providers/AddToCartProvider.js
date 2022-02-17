@@ -5,6 +5,7 @@ export const useAddToCartContext = () => useContext(AddToCartContext);
 
 export const AddToCartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [addEffect, setAddEffect] = useState(false);
 
   //Add item to cart
   const addToCart = (currentAlbum, size, price) => {
@@ -26,7 +27,7 @@ export const AddToCartProvider = ({ children }) => {
   };
 
   return (
-    <AddToCartContext.Provider value={{ cart, addToCart, removeCartItem, setCart }}>
+    <AddToCartContext.Provider value={{ cart, addToCart, removeCartItem, setCart, setAddEffect, addEffect }}>
       {children}
     </AddToCartContext.Provider>
   );
