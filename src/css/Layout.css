@@ -9,6 +9,12 @@
 @media(max-width: 800px){
 .root{
   flex-direction: column;
+  height: 100%;
+}
+
+.flex-order{
+  display: flex;
+  order: -1;
 }
   
 }

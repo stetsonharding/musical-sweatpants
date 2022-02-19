@@ -1,12 +1,13 @@
 .main-container {
-  /* background-color: #888; */
   height: 500px;
   max-width: 1000px;
+
 }
 .main-information {
   margin: 0 1.5rem;
-  padding-bottom: 20px;
+  /* padding-bottom: 40px; */
 }
+
 /* size buttons */
 .size-buttons-container {
   display: flex;
@@ -47,4 +48,32 @@
 
 .action-btn:hover {
   opacity: 0.7;
+}
+
+
+@media(max-width: 800px){
+
+  .main-container {
+    height: 500px;
+    max-width: 1000px;
+  
+  }
+  .main-information {
+    margin-top: 4rem;
+    padding: 3px;
+  }
+
+/* Button Sizes */
+  .size-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Action Button */
+  .add-to-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

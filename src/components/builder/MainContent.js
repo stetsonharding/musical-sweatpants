@@ -48,6 +48,7 @@ function MainContent() {
           </div>
         ))}
       </div>
+      <div className="add-to-cart-btn">
       <button
         className={
           sweatPantSize !== "" ? "action-btn" : "action-btn-disabled"
@@ -58,6 +59,7 @@ function MainContent() {
           Add to cart - $60
         </span>
       </button>
+      </div>
     </div>
   );
 }

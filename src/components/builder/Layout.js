@@ -10,8 +10,12 @@ const Layout = () => {
   return (
     <div className="root">
       <CartBadge />
+    
       <ImageContainer />
+    
+      <div className="flex-order">
       <MainContent />
+      </div>
     </div>
   );
 };
