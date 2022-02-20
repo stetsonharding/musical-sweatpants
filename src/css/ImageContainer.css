@@ -5,8 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
 }
 
 .sweapants-images {
@@ -39,8 +37,27 @@
 }
 
 
-@media(min-width: 1000px){
+@media(max-width: 1000px){
+  .sweapants-images{
+  display: flex;
+  flex-direction: column;
+  }  
 
+  .album-cover-print {
+    position: absolute;
+    top: 73px;
+    left: 112px;
+    height: 120px;
+    width: 120px;
+    opacity: 0.7;
+  }
 
-
+  .artist-name-print {
+    position: absolute;
+    writing-mode: vertical-rl;
+    top: 810px;
+    left: 185px;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
 }

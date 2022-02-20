@@ -86,6 +86,7 @@ function FindAlbum() {
           <SearchResults item={currentAlbum} />
         </div>
       ) : (
+        //Seach Input
         <input
           className="find-album-input"
           type="search"

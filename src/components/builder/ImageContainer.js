@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import "../../css/ImageContainer.css";
 
 //sweatpant images
@@ -8,12 +9,14 @@ import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
 function ImageContainer() {
   const [currentAlbum] = useCurrentAlbumContext();
 
+
   console.log(currentAlbum);
 
   return (
     <div className="sweatpants-container">
       <div className="sweapants-images">
-        <h4 className="artist-name-print">
+    
+      <h4 className="artist-name-print">
           {" "}
           {currentAlbum && currentAlbum.artistName}
         </h4>
@@ -21,7 +24,10 @@ function ImageContainer() {
           className="sweatpants_frontview"
           src={frontSide}
           alt="Front View of Sweatpants"
-        />
+        /> 
+
+
+
         <img
           className="album-cover-print"
           src={currentAlbum && currentAlbum.artworkUrl60}
@@ -31,8 +37,16 @@ function ImageContainer() {
           className="sweatpants_backview"
           src={backSide}
           alt="Back View of Sweatpants"
-        />
+        /> 
+     
+     
+    
+      
+       
+      
+       {/* <button onClick={() => setTest(!test)}>View Frontside</button> */}
       </div>
+  
     </div>
   );
 }
