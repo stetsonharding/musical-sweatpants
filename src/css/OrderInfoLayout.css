@@ -1,0 +1,16 @@
+.order-info{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+height: 100vh;
+margin-top: 4rem;
+}
+
+
+@media(max-width: 1000px){
+.order-info{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
