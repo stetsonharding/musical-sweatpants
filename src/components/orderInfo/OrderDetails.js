@@ -15,8 +15,12 @@ export default function OrderDetails() {
   console.log(cart);
   return (
     <div className="order-details-container">
+        <div className='order-container'>
+        <h3 style={{textAlign: 'center'}}>Order Details</h3>
       {cart.map((item, index) => {
+      
         return (
+
           <div key={index} className="search-results-flex">
             <div className="cart-item-image-container">
               <img src={item.currentAlbum.artworkUrl60} alt="Artist's Album" />
@@ -31,8 +35,11 @@ export default function OrderDetails() {
               </p>
             </div>
           </div>
+
         );
+      
       })}
+        </div>
 
       {/* if nothing is in shopping cart, disable checkout button. 
        if already at checkout and user deletes items out of shopping cart, redirect to home page. */}

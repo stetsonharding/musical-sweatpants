@@ -7,6 +7,12 @@
   height: 100%;
 }
 
+.order-container{
+ height: 200px;
+ overflow: auto;
+}
+
+
 /* price */
 .order-details-price {
   display: flex;
@@ -32,10 +38,20 @@
 
 
 @media(max-width: 1000px){
+  .order-details-total-container{
+    width: 100%;
+   
+  }
   .order-details-container{
-    width: 300px;
+    width: 100%;
+    margin-bottom: 2rem;
   }
   .order-details-price{
-    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+  
+    height: 10px;
+    /* padding: 10px 20px 10px; */
   }
 }

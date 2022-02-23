@@ -1,15 +1,10 @@
 import React from 'react'
 
+import "../../css/FormInput.css"
+
 function FormInput({formData, inputData, setInputData, placeholder}) {
 
-  const formStyle ={
-  borderRadius:'10px',
-  padding: '10px',
-  width: '90%',
-  margin: '.2rem',
-  boxShadow: '1px 1px 1px  black',
-  border: 'none'
-  }
+
 
   //form state
 function handleChange(e) {
@@ -35,7 +30,7 @@ function handleChange(e) {
             value={inputData[data]}
             className='input'
             onChange={handleChange}
-            style={formStyle}
+         
             />
             </div>
         

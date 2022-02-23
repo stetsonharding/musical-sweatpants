@@ -27,12 +27,12 @@ console.log(billingData)
 
 <>
 
-<div className="shipping-form-container" style={{ width: '500px', textAlign: 'center'}}>
+<div className="form-container" style={{ width: '500px', textAlign: 'center'}}>
 <h2 className="title-bold" style={{textAlign: 'center'}}>Billing Information</h2>
 
 <div className="checkbox">
-<input type="checkbox" name="SameAsShipping" onClick={() => checkboxClick()} />
-<label htmlFor='sameAsShipping'>Same as Shipping Address </label>
+{/* <input type="checkbox" name="SameAsShipping" onClick={() => checkboxClick()} />
+<label htmlFor='sameAsShipping'>Same as Shipping Address </label> */}
 </div>
 
 <FormInput

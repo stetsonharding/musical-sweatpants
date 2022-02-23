@@ -12,7 +12,7 @@ function PaymentForm() {
 
 
   return (
-    <div className='payment-form-container' style={{ width: '500px', textAlign: 'center'}}>
+    <div className="form-container">
 
 <h2 className="heavy-text">Payment Infomation</h2>
 

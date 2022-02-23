@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { useOrderFormContext } from "../../providers/OrderFormProvider";
 import FormInput from "./FormInput"
 
+import "../../css/FormInput.css"
+
 function ShippingForm({setShow}) {
     const {shippingData, setShippingData} = useOrderFormContext();
     const history = useHistory();
@@ -17,7 +19,7 @@ function ShippingForm({setShow}) {
     console.log(shippingData)
     return (
         <>
-        <div className="shipping-form-container" style={{ width: '500px', textAlign: 'center'}}>
+        <div className="form-container">
             <h2 className="title-bold" style={{textAlign: 'center'}}>Shipping Information</h2>
             
             <FormInput
