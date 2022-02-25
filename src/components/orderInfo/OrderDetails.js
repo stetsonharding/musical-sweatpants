@@ -12,11 +12,11 @@ export default function OrderDetails() {
   const taxes = subTotal / 10;
   const grandTotal = subTotal + shipping + taxes;
 
-  console.log(cart);
   return (
     <div className="order-details-container">
+          <h3 style={{textAlign: 'center'}}>Order Details</h3>
         <div className='order-container'>
-        <h3 style={{textAlign: 'center'}}>Order Details</h3>
+    
       {cart.map((item, index) => {
       
         return (
@@ -44,7 +44,7 @@ export default function OrderDetails() {
       {/* if nothing is in shopping cart, disable checkout button. 
        if already at checkout and user deletes items out of shopping cart, redirect to home page. */}
 
-      <div className="order-details-total-container">
+      <div className="order-details-pricing-container">
         <hr />
         <div className="order-details-price">
           <h5>Sub Total</h5>

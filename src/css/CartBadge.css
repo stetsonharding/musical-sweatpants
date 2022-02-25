@@ -71,11 +71,7 @@
   opacity: 0.5;
 }
 
-
-
-
 #blinking {
-  /* border-bottom: 10px solid #9ae2ff; */
   border: 5px solid #9ae2ff;
   animation-name: blinking;
   animation-duration: 2s;
@@ -86,5 +82,37 @@
   50% {
     border-color: #ffcd5f;
   
+  }
+}
+
+
+
+@media(max-width: 600px) {
+  .cart-badge {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(7, 188, 233);
+    cursor: pointer;
+  
+    /* positioning badge */
+    position: absolute;
+    background-color: #fff;
+    width: 33px;
+    height: 33px;
+    top: 10px;
+    right: 10px;
+    background-image: url("../assets/bag.svg");
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    background-position-x: center;
+    background-position-y: 2px;
+    z-index: 2;
+    background-size: 25px 25px;
   }
 }

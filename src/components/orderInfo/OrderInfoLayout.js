@@ -13,7 +13,11 @@ export default function OrderInfoLayout() {
   const [show, setShow] = useState(0)
   return (
     <div className='order-info-container'>
+      <div>
+
       <CartBadge />
+
+      </div>
 
       <div className="order-info">
         <OrderDetails /> 
