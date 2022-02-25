@@ -2,7 +2,7 @@ import React from 'react';
 import { useOrderFormContext } from '../../providers/OrderFormProvider';
 import FormInput from './FormInput';
 
-
+import "../../css/FormInput.css"
 
 export default function BillingForm({setShow}) {
 
@@ -27,7 +27,7 @@ console.log(billingData)
 
 <>
 
-<div className="form-container" style={{ width: '500px', textAlign: 'center'}}>
+<div className="form-container">
 <h2 className="title-bold" style={{textAlign: 'center'}}>Billing Information</h2>
 
 <div className="checkbox">
