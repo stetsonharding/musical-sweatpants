@@ -30,10 +30,10 @@
 /* Quick cart view */
 .quick-cart-container {
   background-color: #faf9f9;
-  box-shadow: 0 12px 25px 0 rgba(153, 163, 169, 0.13),
+  box-shadow: 0 12px 25px 0 rgba(0, 12, 19, 0.13),
     0 4px 12px 0 rgba(154, 164, 169, 0.12);
   width: 400px;
-  height: 300px;
+  height: 365px;
   position: absolute;
   top: 60px;
   right: 40px;
@@ -71,6 +71,7 @@
   opacity: 0.5;
 }
 
+/* Cart Badge blinking when items added */
 #blinking {
   border: 5px solid #9ae2ff;
   animation-name: blinking;
@@ -86,33 +87,42 @@
 }
 
 
+@media (max-width: 285px) and (min-width: 100px)  {
+  /* Quick Cart */
+  .quick-cart-container {
+    width: 260px;
+    height: 375px;
+    position: none;
+    top: 50px;
+    right: 20px;
+    border: 1px solid black;
+  
+  }
 
-@media(max-width: 600px) {
+
+}
+
+@media(max-width: 600px) and (min-width: 300px) {
   .cart-badge {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(7, 188, 233);
-    cursor: pointer;
-  
     /* positioning badge */
     position: absolute;
-    background-color: #fff;
     width: 33px;
     height: 33px;
     top: 10px;
     right: 10px;
-    background-image: url("../assets/bag.svg");
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    background-position-x: center;
     background-position-y: 2px;
-    z-index: 2;
     background-size: 25px 25px;
+  }
+
+
+  /* Quick Cart */
+  .quick-cart-container {
+    width: 320px;
+    height: 355px;
+    position: none;
+    top: 30px;
+    right: 25px;
+    border: 1px solid black;
+  
   }
 }

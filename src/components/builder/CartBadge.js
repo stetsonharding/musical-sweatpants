@@ -61,7 +61,7 @@ function QuickCartView() {
       >
         {cart.length === 0 && (
           <p className="shopping-cart-message">
-            Please add 1+ items to your shopping cart before checkout.
+            Please add items to your shopping cart before checkout.
           </p>
         )}
       </div>
