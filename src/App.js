@@ -22,9 +22,9 @@ function App() {
               <OrderFormProvider>
               <div className="App-container">
                 <Routes>
-                  <Route exact path="/" component={Layout} />
-                  <Route path="/orderDetails" component={OrderInfoLayout} />
-                  <Route path="/orderComplete" component={OrderComplete} />
+                  <Route exact path="/" element={<Layout/>} />
+                  <Route path="/orderDetails" element={<OrderInfoLayout/>} />
+                  <Route path="/orderComplete" element={<OrderComplete />} />
                 </Routes>
               </div>
               </OrderFormProvider>
