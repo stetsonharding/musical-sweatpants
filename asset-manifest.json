@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.a265a438.chunk.css",
-    "main.js": "/static/js/main.da2a602b.chunk.js",
-    "main.js.map": "/static/js/main.da2a602b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.13aec19b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.13aec19b.js.map",
-    "static/js/2.e62840a9.chunk.js": "/static/js/2.e62840a9.chunk.js",
-    "static/js/2.e62840a9.chunk.js.map": "/static/js/2.e62840a9.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.a265a438.chunk.css.map": "/static/css/main.a265a438.chunk.css.map",
-    "static/js/2.e62840a9.chunk.js.LICENSE.txt": "/static/js/2.e62840a9.chunk.js.LICENSE.txt",
-    "static/media/backside.5c864418.png": "/static/media/backside.5c864418.png",
-    "static/media/CartBadge.css": "/static/media/bag.e0594367.svg",
-    "static/media/frontside.c9fb93d6.png": "/static/media/frontside.c9fb93d6.png"
+    "main.css": "/musical-sweatpants/static/css/main.1ce527c4.css",
+    "main.js": "/musical-sweatpants/static/js/main.6047d542.js",
+    "static/media/frontside.png": "/musical-sweatpants/static/media/frontside.c9fb93d60e68b7780c0e.png",
+    "static/media/backside.png": "/musical-sweatpants/static/media/backside.5c86441840b5e73563a1.png",
+    "static/media/bag.svg": "/musical-sweatpants/static/media/bag.e0594367bd987537d74c.svg",
+    "index.html": "/musical-sweatpants/index.html",
+    "main.1ce527c4.css.map": "/musical-sweatpants/static/css/main.1ce527c4.css.map",
+    "main.6047d542.js.map": "/musical-sweatpants/static/js/main.6047d542.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.13aec19b.js",
-    "static/js/2.e62840a9.chunk.js",
-    "static/css/main.a265a438.chunk.css",
-    "static/js/main.da2a602b.chunk.js"
+    "static/css/main.1ce527c4.css",
+    "static/js/main.6047d542.js"
   ]
 }
