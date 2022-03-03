@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useOrderFormContext } from "../../providers/OrderFormProvider";
 import FormInput from "./FormInput"
 
@@ -7,7 +7,7 @@ import "../../css/FormInput.css"
 
 function ShippingForm({setShow}) {
     const {shippingData, setShippingData} = useOrderFormContext();
-    const history = useHistory();
+    const history = useNavigate();
 
 
     const handleClick = (e) => {

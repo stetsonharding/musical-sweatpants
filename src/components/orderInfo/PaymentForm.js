@@ -1,14 +1,13 @@
 import React from 'react';
 import FormInput from '../orderInfo/FormInput'
-import {useHistory} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 import { useOrderFormContext } from '../../providers/OrderFormProvider';
 
 function PaymentForm() {
 
   const {paymentData, setPaymentData, shippingData, setShippingData} = useOrderFormContext();
-  const history = useHistory()
-
+  const history = useNavigate();
 
 
   return (

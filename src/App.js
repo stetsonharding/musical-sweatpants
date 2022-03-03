@@ -10,7 +10,7 @@ import OrderComplete from "./components/builder/OrderComplete"
 
 import OrderInfoLayout from "./components/orderInfo/OrderInfoLayout";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -21,11 +21,11 @@ function App() {
             <AddToCartProvider>
               <OrderFormProvider>
               <div className="App-container">
-                <Switch>
+                <Routes>
                   <Route exact path="/" component={Layout} />
                   <Route path="/orderDetails" component={OrderInfoLayout} />
                   <Route path="/orderComplete" component={OrderComplete} />
-                </Switch>
+                </Routes>
               </div>
               </OrderFormProvider>
             </AddToCartProvider>

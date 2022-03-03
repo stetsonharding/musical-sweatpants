@@ -1,6 +1,6 @@
 import React from 'react';
 import { useOrderFormContext } from '../../providers/OrderFormProvider';
-import {useHistory} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider"
 import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
 import { useAddToCartContext } from "../../providers/AddToCartProvider";
@@ -13,7 +13,7 @@ function OrderComplete() {
   const { setCart } = useAddToCartContext();
   const { setSweatpantSize } = useSweatpantSizeContext();
   const {shippingData} = useOrderFormContext();
-  const history = useHistory()
+  const history = useNavigate()
 
 //resetting state values, redirection to home page.
   const handlePayNow = () =>{
