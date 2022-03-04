@@ -1,12 +1,12 @@
 import React from "react";
-
+//context
+import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
+//css
 import "../../css/SizeButtons.css";
 
-import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
-
+//Displays sweatpants size buttons.
 function SizeButtons(props) {
   const { getSweatpantSize, sweatPantSize } = useSweatpantSizeContext();
-
   return (
     <div className="container">
       <button
@@ -24,5 +24,4 @@ function SizeButtons(props) {
     </div>
   );
 }
-
 export default SizeButtons;

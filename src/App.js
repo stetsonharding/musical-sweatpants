@@ -22,8 +22,8 @@ function App() {
               <OrderFormProvider>
               <div className="App-container">
                 <Routes>
-                  <Route exact path="/" element={<Layout/>} />
-                  <Route path="/orderDetails" element={<OrderInfoLayout/>} />
+                  <Route exact path="/musical-sweatpants" element={<Layout/>} />
+                  <Route path="/musical-sweatpants/orderDetails" element={<OrderInfoLayout/>} />
                   <Route path="/orderComplete" element={<OrderComplete />} />
                 </Routes>
               </div>
@@ -35,5 +35,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

@@ -1,50 +1,44 @@
 import React from 'react';
+//useNavigate to redirect back to home page.
+import { Link } from "react-router-dom";
+//context
 import { useOrderFormContext } from '../../providers/OrderFormProvider';
-import {useNavigate} from "react-router-dom"
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider"
 import { useSweatpantSizeContext } from "../../providers/SweatpantSizeProvider";
 import { useAddToCartContext } from "../../providers/AddToCartProvider";
-
+//css
 import "../../css/MainContent.css";
 
-
+//Component Displaying thank you message to user displaying first and last name of user.
 function OrderComplete() {
-  const [currentAlbum, setCurrentAlbum] = useCurrentAlbumContext();
+  const [setCurrentAlbum] = useCurrentAlbumContext();
   const { setCart } = useAddToCartContext();
   const { setSweatpantSize } = useSweatpantSizeContext();
   const {shippingData} = useOrderFormContext();
-  const history = useNavigate()
 
-//resetting state values, redirection to home page.
-  const handlePayNow = () =>{
+
+//resetting state values
+  const handleStartOver = () =>{
     setCurrentAlbum(null)
     setCart([])
     setSweatpantSize("")
-    history.push('/')
-
   }
-  
   return (
     <>
-    <div style={{height: '90vh'}}>
-  <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh', flexDirection:'column'}}>
-<div>
-    <h1>Thank you for your order, {shippingData.firstname} {shippingData.lastname}!</h1>
+  <div>
+    <div className="order-complete-msg">
+      <div>
+        <h1>Thank you for your order, {shippingData.firstname} {shippingData.lastname}!</h1>
+      </div>
+    <Link
+    onClick={() => handleStartOver()}
+    to="/musical-sweatpants"
+    >
+    <button className='action-btn'>Start Over</button>
+    </Link>
     </div>
-
-    <div>
-    
-    <button className='action-btn' onClick={() => handlePayNow()}>Start Over</button>
-
-    </div>
-
-
-</div>
-
-</div>
+  </div>
   </>
-
   )
 }
-
 export default OrderComplete;

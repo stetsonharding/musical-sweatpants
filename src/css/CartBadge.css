@@ -27,6 +27,11 @@
   background-size: 30px 30px;
 }
 
+.cart-total-price{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* Quick cart view */
 .quick-cart-container {
   background-color: #faf9f9;
@@ -45,6 +50,7 @@
   letter-spacing: 1px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+    text-align: center;
 }
 
 /* Checkout Button center, styles and hover */
@@ -90,7 +96,7 @@
 @media (max-width: 285px) and (min-width: 100px)  {
   /* Quick Cart */
   .quick-cart-container {
-    width: 260px;
+    width: 270px;
     height: 375px;
     position: none;
     top: 50px;
@@ -117,7 +123,7 @@
 
   /* Quick Cart */
   .quick-cart-container {
-    width: 320px;
+    width: 330px;
     height: 355px;
     position: none;
     top: 30px;

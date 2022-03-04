@@ -57,7 +57,7 @@ function PaymentForm() {
   placeholder={["Expiration (MM/YY), Security code"]}
 />
 
-<button className="action-btn" onClick={() => history.push('/orderComplete')}>Pay Now</button>
+<button className="action-btn" onClick={() => history('/orderComplete')}>Pay Now</button>
 
     </div>
   )

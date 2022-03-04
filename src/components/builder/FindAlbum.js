@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
+
+//importing debounce so api is not called upon every keystroke.
 import { useDebounce } from "use-lodash-debounce";
+//context
 import { useApiContext } from "../../providers/ApiProvider";
 import { useCurrentAlbumContext } from "../../providers/CurrentAlbumProvider";
-
+//css
 import "../../css/FindAlbum.css";
 
 function FindAlbum() {
@@ -13,7 +16,7 @@ function FindAlbum() {
   const [isResultsShown, setIsResultsShown] = useState(false);
   const debouncedAlbumSearch = useDebounce(albumSearch, 1000);
 
-  //this function will run if query or getapi function has changed
+  //this function will run if query or get api function has changed
   const SearchAlbum = useCallback(
     async (input) => {
       const baseUrl = "https://itunes.apple.com/search?";
@@ -24,19 +27,24 @@ function FindAlbum() {
         callback: "getApi",
         term: input,
       };
+      //building query string and calling api storing api data in results.
       const completeUrl = `${baseUrl}${buildQueryString(urlAlbumOptions)}`;
       const results = await getApi(completeUrl);
-      //removing unwanted data from api
+
+      //removing unwanted data from api we only want music.
       const albumData = JSON.parse(
         results.data.slice(9, -4).replace(/\u21b5/g, "")
       );
+
+      //Storing api results in state, and showing user.
       setAlbumJson(albumData.results);
       setIsResultsShown(true);
-      // console.log(albumJson);
     },
     [buildQueryString, getApi]
   );
 
+  //this will run upon render, and anytime debounced or search album is changed.
+  //takes users query and passes to search album
   useEffect(() => {
     if (debouncedAlbumSearch) {
       SearchAlbum(debouncedAlbumSearch);
@@ -45,7 +53,7 @@ function FindAlbum() {
     }
   }, [debouncedAlbumSearch, SearchAlbum]);
 
-  //sets current album in state
+  //sets current album in state upon clicked.
   const getCurrentAlbum = (album) => {
     setCurrentAlbum(album);
   };
@@ -71,22 +79,16 @@ function FindAlbum() {
   return (
     <div className="find-album-input-container">
       <p id="find-album-label">Album Art</p>
+      {/* If there is a selected album, pass current selected album to Search Results. If not display input for user to search for album*/}
       {currentAlbum ? (
-        //deletes current album, resets search
         <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            paddingLeft: "20px",
-            cursor: "pointer",
-          }}
-        >
+        className="selected-album-delete">
+          {/* Deletes selected album */}
           <h5 onClick={() => [setCurrentAlbum(null), setAlbumSearch("")]}>X</h5>
+          {/*Component to display album information. */}
           <SearchResults item={currentAlbum} />
         </div>
       ) : (
-        //Seach Input
         <input
           className="find-album-input"
           type="search"
@@ -95,7 +97,7 @@ function FindAlbum() {
         />
       )}
 
-      {/* all API results */}
+      {/* This will display all the current API results based on users search query. */}
       {isResultsShown && albumJson.length > 1 && !currentAlbum ? (
         <div className="search-results-container">
           {albumJson.map((item, index) => (
@@ -108,5 +110,4 @@ function FindAlbum() {
     </div>
   );
 }
-
 export default FindAlbum;
