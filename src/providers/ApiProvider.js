@@ -13,7 +13,6 @@ const buildQueryString = (obj) => {
     // check if value is an array, and loop over it
     newString = newString + `${key}=${value}&`;
   }
-
   return newString.slice(0, -1);
 };
 

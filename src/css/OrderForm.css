@@ -1,54 +1,53 @@
 /* First, last name inputs */
-.name-input {
+/* .name-input {
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 50px;
   width: 200px;
   border: none;
   box-shadow: 2px 2px 4px -2px rgb(83, 82, 82);
-}
+} */
 /* Address, apartment, city inputs*/
-.user-input-address {
+/* .user-input-address {
   padding: 0.9rem;
   margin: 0.4rem;
   border-radius: 50px;
   min-width: 95%;
   border: none;
   box-shadow: 2px 2px 4px -2px rgb(83, 82, 82);
-}
+} */
 /* zip input */
-.user-input-zip{
+/* .user-input-zip{
   width: 150px;
   padding: .2rem;
   border-radius: 20px;
   border: none;
   box-shadow: 2px 2px 4px -2px rgb(83, 82, 82);
-}
+} */
 /* Country, State, inputs */
-.form-country-selection {
+/* .form-country-selection {
 width: 150px;
-}
+} */
 
-.form-select-container{
+/* .form-select-container{
 width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 padding: .6rem;
+} */
 
-}
-
-.form-country-selection,
+/* .form-country-selection,
 .form-state-selection {
   padding: .2rem;
   margin: 0 .2rem;
   border-radius: 20px;
   border: none;
   box-shadow: 2px 2px 4px -2px rgb(83, 82, 82);
-}
+} */
 
 /* Continue to billing button */
-.continute-btn {
+/* .continute-btn {
   background-color: rgb(25, 236, 236);
   width: 230px;
   border: none;
@@ -59,8 +58,7 @@ padding: .6rem;
   margin: 2rem 1.5rem;
   padding: 10px;
   cursor: pointer;
- 
 }
 .continute-btn:hover {
   opacity: 0.8;
-}
+} */

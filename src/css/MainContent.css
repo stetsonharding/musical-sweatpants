@@ -1,11 +1,10 @@
+/* main container */
 .main-container {
   height: 500px;
   max-width: 1000px;
-
 }
 .main-information {
   margin: 0 1.5rem;
-  /* padding-bottom: 40px; */
 }
 
 /* size buttons */
@@ -19,6 +18,7 @@
   padding-bottom: 0.7rem;
 }
 
+/* Add to cart btn */
 .action-btn {
   background-color: rgb(25, 236, 236);
   width: 230px;
@@ -32,6 +32,7 @@
   cursor: pointer;
 }
 
+/* add to cart btn disabled */
 .action-btn-disabled {
   background-color: rgb(25, 236, 236);
   width: 230px;
@@ -58,13 +59,10 @@
   flex-direction: column;
 }
 
-
 @media(max-width: 800px){
-
   .main-container {
     height: 500px;
     max-width: 1000px;
-  
   }
   .main-information {
     margin-top: 4rem;

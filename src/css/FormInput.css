@@ -1,3 +1,8 @@
+    .form-container {
+        width: 500px;
+        text-align: center;
+    }
+    
     input{
         border-radius: 10px;
         padding: 10px;
@@ -6,18 +11,10 @@
         box-shadow: 1px 1px 1px black;
         border: none;
     }
-
-    .form-container {
-        width: 500px;
-        text-align: center;
-    }
-
-    
   /* Extra small devices (phones, 600px and down) */
 @media(max-width: 600px) {
     input{
         width: 50%; 
-       
     }
 }
 

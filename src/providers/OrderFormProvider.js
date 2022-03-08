@@ -9,8 +9,6 @@ export const OrderFormProvider = ({children}) => {
 const [shippingData, setShippingData] = useState(addressData)
 const [billingData, setBillingData] = useState(addressData)
 const [paymentData, setPaymentData] = useState(paymentFormData)
-//billing
-//payment
 
 return(
     <OrderFormContext.Provider
@@ -23,13 +21,10 @@ return(
             paymentData,
             setPaymentData
         }
-       
     }
     >
    {children}
     </OrderFormContext.Provider>
 )
-
 }
-
 export default OrderFormProvider

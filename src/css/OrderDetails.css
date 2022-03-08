@@ -7,32 +7,30 @@
   width: 420px;
   margin: 2rem;
 }
-
 .order-details-container h3{
   text-align: center;
 }
 
+/* Sweatpands, size, and price */
 .order-container{
  height: 110px;
  overflow: auto;
 }
 
-
-/* price */
+/* total price including shipping and taxes. */
 .order-details-price {
   display: flex;
   justify-content: space-between;
   width: 400px;
-
   height: 10px;
   padding: 10px 20px 10px;
 }
 
+/* Changing colors of table */
 .order-details-price:nth-child(odd) {
   background-color: rgb(207, 207, 207);
   border-radius: 10px;
 }
-
 .order-details-price h4,
 .order-details-price h5 {
   font-weight: normal;
@@ -40,7 +38,6 @@
 .order-details-price #grand-total {
   font-weight: bold;
 }
-
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -58,14 +55,3 @@
 
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 1200px) {}
