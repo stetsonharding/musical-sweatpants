@@ -6,7 +6,10 @@
   height: 420px;
   width: 420px;
   margin: 2rem;
+}
 
+.order-details-container h3{
+  text-align: center;
 }
 
 .order-container{

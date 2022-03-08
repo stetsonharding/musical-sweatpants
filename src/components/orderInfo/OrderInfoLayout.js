@@ -5,27 +5,23 @@ import OrderDetails from "./OrderDetails";
 import ShippingForm from "./ShippingForm"
 import BillingForm from "./BillingForm";
 import PaymentForm from "./PaymentForm";
-
+//css
 import "../../css/OrderInfoLayout.css"
 
 export default function OrderInfoLayout() {
- 
-  const [show, setShow] = useState(0)
+  //State to condionally render forms.
+  const [isFormShown, setIsFormShown] = useState(0)
+
   return (
     <div className='order-info-container'>
       <div>
-
       <CartBadge />
-
       </div>
-
       <div className="order-info">
         <OrderDetails /> 
-        {show === 0 ? <ShippingForm setShow={setShow}/> : show === 1 ? <BillingForm setShow={setShow}/> : show === 2 ? <PaymentForm /> : null }
+        {/* Conditionally rendering checkout forms */}
+        {isFormShown === 0 ? <ShippingForm setIsFormShown={setIsFormShown}/> : isFormShown === 1 ? <BillingForm setIsFormShown={setIsFormShown}/> : isFormShown === 2 ? <PaymentForm /> : null }
       </div>
-
     </div>
-
   );
-
 }

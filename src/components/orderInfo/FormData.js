@@ -1,3 +1,4 @@
+//All the data we need from user upon checking out.
 export const shippingbillingFormData = {
     firstname: "",
     lastname: "",
@@ -8,7 +9,6 @@ export const shippingbillingFormData = {
     state: "",
     zip: ""
   }
-  
   export const paymentFormData = {
     shipping: "",
     billing: "",

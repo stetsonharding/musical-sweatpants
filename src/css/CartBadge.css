@@ -1,3 +1,16 @@
+/* Cart Badge blinking when items added */
+#blinking {
+  border: 5px solid #9ae2ff;
+  animation-name: blinking;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes blinking {
+  50% {
+    border-color: #ffcd5f;
+  }
+}
+
 /* badge */
 .cart-badge {
   -webkit-user-select: none;
@@ -27,6 +40,7 @@
   background-size: 30px 30px;
 }
 
+/* Total Price  */
 .cart-total-price{
   display: flex;
   justify-content: space-evenly;
@@ -77,21 +91,6 @@
   opacity: 0.5;
 }
 
-/* Cart Badge blinking when items added */
-#blinking {
-  border: 5px solid #9ae2ff;
-  animation-name: blinking;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  
-}
-@keyframes blinking {
-  50% {
-    border-color: #ffcd5f;
-  
-  }
-}
-
 
 @media (max-width: 285px) and (min-width: 100px)  {
   /* Quick Cart */
@@ -102,10 +101,7 @@
     top: 50px;
     right: 20px;
     border: 1px solid black;
-  
   }
-
-
 }
 
 @media(max-width: 600px) and (min-width: 300px) {
@@ -119,8 +115,6 @@
     background-position-y: 2px;
     background-size: 25px 25px;
   }
-
-
   /* Quick Cart */
   .quick-cart-container {
     width: 330px;
@@ -129,6 +123,5 @@
     top: 30px;
     right: 25px;
     border: 1px solid black;
-  
   }
 }

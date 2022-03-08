@@ -1,7 +1,7 @@
 import React from "react";
-
+//Context
 import { useAddToCartContext } from "../providers/AddToCartProvider";
-
+//css
 import "../css/CartItem.css";
 
 export default function CartItems() {
@@ -9,6 +9,7 @@ export default function CartItems() {
 
   return (
     <div className="cart-item-container">
+      {/*Iterate through cart array, display data */}
       {cart.map((item, index) => {
         return (
           <div key={index} className="search-results-flex">
@@ -24,6 +25,7 @@ export default function CartItems() {
                 {item.currentAlbum.artistName}
               </p>
               <div className="remove-item-container">
+                {/* Removed item from cart, function is imported and called from context */}
                 <button onClick={() => removeCartItem(item.currentAlbum)}>
                   Remove
                 </button>

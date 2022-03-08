@@ -1,12 +1,10 @@
 import React from 'react'
-
+//css
 import "../../css/FormInput.css"
 
 function FormInput({formData, inputData, setInputData, placeholder}) {
 
-
-
-  //form state
+  //Get value from current form, whatever the name is of that form, add the value we got to it.
 function handleChange(e) {
   const value = e.target.value
   setInputData({
@@ -17,8 +15,8 @@ function handleChange(e) {
 
   return (
     <div className='form-input-flex'>
+      {/* Iterate though input data array, with the given information, create a form using supplied data. */}
       {inputData.map((data, index) => {
-          // console.log(data)
         return (
           <div key={placeholder[index]}
           className='input-container'
@@ -30,11 +28,9 @@ function handleChange(e) {
             value={inputData[data]}
             className='input'
             onChange={handleChange}
-         
             />
             </div>
-        
-        )
+          )
       })}
     </div>
   )
