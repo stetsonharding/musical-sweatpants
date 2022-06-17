@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/musical-sweatpants/static/css/main.1ce527c4.css",
-    "main.js": "/musical-sweatpants/static/js/main.961b1906.js",
+    "main.css": "/musical-sweatpants/static/css/main.1b208935.css",
+    "main.js": "/musical-sweatpants/static/js/main.faad9c8f.js",
     "static/media/frontside.png": "/musical-sweatpants/static/media/frontside.c9fb93d60e68b7780c0e.png",
     "static/media/backside.png": "/musical-sweatpants/static/media/backside.5c86441840b5e73563a1.png",
     "static/media/bag.svg": "/musical-sweatpants/static/media/bag.e0594367bd987537d74c.svg",
     "index.html": "/musical-sweatpants/index.html",
-    "main.1ce527c4.css.map": "/musical-sweatpants/static/css/main.1ce527c4.css.map",
-    "main.961b1906.js.map": "/musical-sweatpants/static/js/main.961b1906.js.map"
+    "main.1b208935.css.map": "/musical-sweatpants/static/css/main.1b208935.css.map",
+    "main.faad9c8f.js.map": "/musical-sweatpants/static/js/main.faad9c8f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ce527c4.css",
-    "static/js/main.961b1906.js"
+    "static/css/main.1b208935.css",
+    "static/js/main.faad9c8f.js"
   ]
 }
